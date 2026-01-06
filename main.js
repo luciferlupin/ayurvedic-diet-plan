@@ -340,9 +340,30 @@ function computeDominantDosha(scores) {
 }
 
 function renderDosha() {
-  el("doshaType").textContent = state.dosha ? state.dosha.title : "—";
-  el("doshaAbout").textContent = state.dosha ? state.dosha.about : "Take the quiz to see your description.";
-  el("doshaDiet").textContent = state.dosha ? state.dosha.diet : "Your food focus will appear here.";
+  const doshaTypeEl = el("doshaType");
+  const doshaAboutEl = el("doshaAbout");
+  const doshaDietEl = el("doshaDiet");
+  
+  if (state.dosha) {
+    // Animate the dosha type appearance
+    doshaTypeEl.style.opacity = '0';
+    doshaTypeEl.style.transform = 'scale(0.8)';
+    
+    setTimeout(() => {
+      doshaTypeEl.textContent = state.dosha.title;
+      doshaTypeEl.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+      doshaTypeEl.style.opacity = '1';
+      doshaTypeEl.style.transform = 'scale(1)';
+    }, 100);
+    
+    doshaAboutEl.textContent = state.dosha.about;
+    doshaDietEl.textContent = state.dosha.diet;
+  } else {
+    doshaTypeEl.textContent = "—";
+    doshaAboutEl.textContent = "Take the quiz to see your description.";
+    doshaDietEl.textContent = "Your food focus will appear here.";
+  }
+  
   el("contactDosha").textContent = state.dosha ? state.dosha.title : "—";
 }
 
@@ -993,6 +1014,23 @@ function init() {
     setHero();
     renderDosha();
     renderPlan();
+    
+    // Auto-scroll to answer section with smooth animation
+    setTimeout(() => {
+      const answerSection = document.getElementById('doshaType').closest('.rounded-3xl');
+      if (answerSection) {
+        answerSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        });
+        
+        // Add highlight animation to answer section
+        answerSection.classList.add('ring-4', 'ring-earth-moss/50', 'ring-offset-2');
+        setTimeout(() => {
+          answerSection.classList.remove('ring-4', 'ring-earth-moss/50', 'ring-offset-2');
+        }, 2000);
+      }
+    }, 300);
   });
 
   el("doshaReset").addEventListener("click", () => {

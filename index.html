@@ -589,7 +589,7 @@
             <button id="doshaReset" class="fade-in-right rounded-xl border border-earth-clay/40 bg-white/60 px-4 py-2 text-sm font-semibold hover:bg-earth-sand transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-soft">Reset</button>
           </div>
 
-          <div class="mt-6 grid gap-6 lg:grid-cols-2">
+          <div class="mt-6">
             <div class="rounded-3xl border border-earth-clay/25 bg-white/60 p-6 shadow-soft hover-lift transition-all duration-300">
               <form id="doshaForm" class="grid gap-5"></form>
               <button id="doshaSubmit" class="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-earth-moss px-5 py-3 text-sm font-semibold text-earth-sand shadow-soft hover:bg-earth-leaf transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg" type="button">
@@ -597,20 +597,41 @@
               </button>
             </div>
 
-            <div class="rounded-3xl border border-earth-clay/25 bg-white/60 p-6 shadow-soft">
-              <h3 class="font-serif text-xl font-bold">Your Dosha Summary</h3>
-              <div class="mt-4 grid gap-3">
-                <div class="rounded-2xl bg-earth-sand/70 p-4 transition-all duration-300 hover:bg-earth-sand/90">
-                  <div class="text-xs font-semibold text-earth-soil/80">Dominant Dosha</div>
-                  <div id="doshaType" class="mt-1 text-2xl font-black">—</div>
+            <div class="mt-6 rounded-3xl border border-earth-clay/25 bg-gradient-to-br from-white/70 to-earth-sand/50 p-6 shadow-soft backdrop-blur-sm hover-lift transition-all duration-300">
+              <h3 class="font-serif text-xl font-bold bg-gradient-to-r from-earth-forest via-earth-moss to-earth-leaf bg-clip-text text-transparent">Your Dosha Summary</h3>
+              <div class="mt-6 grid gap-4">
+                <div class="rounded-2xl bg-gradient-to-r from-earth-moss/20 to-earth-leaf/20 p-5 border border-earth-moss/30 transition-all duration-300 hover:from-earth-moss/30 hover:to-earth-leaf/30 hover:shadow-soft transform hover:-translate-y-1">
+                  <div class="flex items-center gap-3 mb-2">
+                    <div class="h-8 w-8 rounded-full bg-earth-moss flex items-center justify-center">
+                      <svg class="h-4 w-4 text-earth-sand" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                      </svg>
+                    </div>
+                    <div class="text-sm font-semibold text-earth-forest">Dominant Dosha</div>
+                  </div>
+                  <div id="doshaType" class="text-3xl font-black bg-gradient-to-r from-earth-forest to-earth-moss bg-clip-text text-transparent">—</div>
                 </div>
-                <div class="rounded-2xl bg-earth-sand/70 p-4 transition-all duration-300 hover:bg-earth-sand/90">
-                  <div class="text-xs font-semibold text-earth-soil/80">About</div>
-                  <div id="doshaAbout" class="mt-1 text-sm text-earth-soil/90">Take the quiz to see your description.</div>
+                <div class="rounded-2xl bg-gradient-to-r from-earth-sand/80 to-white/80 p-5 border border-earth-clay/25 transition-all duration-300 hover:from-earth-sand/90 hover:to-white/90 hover:shadow-soft transform hover:-translate-y-1">
+                  <div class="flex items-center gap-3 mb-2">
+                    <div class="h-8 w-8 rounded-full bg-earth-leaf flex items-center justify-center">
+                      <svg class="h-4 w-4 text-earth-sand" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                      </svg>
+                    </div>
+                    <div class="text-sm font-semibold text-earth-forest">About Your Dosha</div>
+                  </div>
+                  <div id="doshaAbout" class="text-base text-earth-soil/90 leading-relaxed">Take the quiz to see your description.</div>
                 </div>
-                <div class="rounded-2xl bg-earth-moss/10 p-4 border border-earth-moss/25 transition-all duration-300 hover:bg-earth-moss/20">
-                  <div class="text-xs font-semibold text-earth-soil/80">Diet Focus</div>
-                  <div id="doshaDiet" class="mt-1 text-sm text-earth-soil/90">Your food focus will appear here.</div>
+                <div class="rounded-2xl bg-gradient-to-r from-earth-forest/10 to-earth-moss/10 p-5 border border-earth-moss/25 transition-all duration-300 hover:from-earth-forest/20 hover:to-earth-moss/20 hover:shadow-soft transform hover:-translate-y-1">
+                  <div class="flex items-center gap-3 mb-2">
+                    <div class="h-8 w-8 rounded-full bg-earth-clay flex items-center justify-center">
+                      <svg class="h-4 w-4 text-earth-sand" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.995.751l-.18-.008a1 1 0 01-.894-.559L8.19 13.31a1 1 0 01.894 1.788l1.233-.616 1.738 5.42a1 1 0 00.995.751l.18-.008a1 1 0 00.894-.559L13.31 8.19a1 1 0 00-1.788.894l.616 1.233-5.42 1.738a1 1 0 01-.751.995l.008.18a1 1 0 00.559.894L6.69 13.31a1 1 0 01-1.788-.894l-.616-1.233-5.42 1.738a1 1 0 01-.995-.751l-.18-.008a1 1 0 00-.894.559L6.69 11.81a1 1 0 001.788-.894l-.616-1.233 5.42-1.738a1 1 0 01.751-.995l-.008-.18a1 1 0 00-.559-.894L13.31 6.69a1 1 0 001.788-.894l.616 1.233 5.42-1.738a1 1 0 01.995-.751l.18.008a1 1 0 00.894-.559L13.31 8.19a1 1 0 00-1.788.894l.616 1.233z"/>
+                      </svg>
+                    </div>
+                    <div class="text-sm font-semibold text-earth-forest">Diet Focus</div>
+                  </div>
+                  <div id="doshaDiet" class="text-base text-earth-soil/90 leading-relaxed">Your food focus will appear here.</div>
                 </div>
               </div>
             </div>
