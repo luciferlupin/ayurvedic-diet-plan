@@ -330,9 +330,26 @@ function renderBmi() {
 
 function computeDominantDosha(scores) {
   const pairs = Object.entries(scores).sort((a, b) => b[1] - a[1]);
-  const [top, second] = pairs;
+  const [top, second, third] = pairs;
+  
+  // Count how many doshas have non-zero scores
+  const nonZeroScores = pairs.filter(([_, score]) => score > 0);
+  
+  // If user has selections from 3 different doshas (A, B, C), show dual dosha
+  if (nonZeroScores.length >= 3) {
+    // Find the two highest scores for dual dosha
+    const [first, secondHighest] = pairs;
+    return { 
+      kind: "dual", 
+      title: `${first[0].toUpperCase()} + ${secondHighest[0].toUpperCase()}`, 
+      primary: first[0], 
+      secondary: secondHighest[0], 
+      scores 
+    };
+  }
+  
+  // Original logic for 1 or 2 doshas
   const diff = top[1] - second[1];
-
   if (diff <= 1) {
     return { kind: "dual", title: `${top[0].toUpperCase()} + ${second[0].toUpperCase()}`, primary: top[0], secondary: second[0], scores };
   }
