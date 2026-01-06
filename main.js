@@ -241,6 +241,12 @@ const doshaProfiles = {
       "Your responses are close across two doshas. A dual-dosha approach often works best: follow the overlap that feels most supportive day-to-day.",
     diet: "Focus on balance, meal regularity, and seasonal adjustments.",
   },
+  tridosha: {
+    title: "Tridosha",
+    about:
+      "You have a perfect balance of all three doshas - Vata, Pitta, and Kapha. This is rare and special. Focus on maintaining harmony through seasonal eating, routine, and mindful practices that honor all aspects of your constitution.",
+    diet: "Emphasize balance and moderation: include warming foods for Vata, cooling foods for Pitta, and light foods for Kapha. Practice regular meal times and seasonal adjustments.",
+  },
 };
 
 function round1(num) {
@@ -335,8 +341,22 @@ function computeDominantDosha(scores) {
   // Count how many doshas have non-zero scores
   const nonZeroScores = pairs.filter(([_, score]) => score > 0);
   
-  // If user has selections from 3 different doshas (A, B, C), show dual dosha
+  // Check for tridosha (all three doshas equal)
   if (nonZeroScores.length >= 3) {
+    // Check if all three scores are equal (tridosha)
+    const allEqual = nonZeroScores.every(([_, score]) => score === nonZeroScores[0][1]);
+    
+    if (allEqual) {
+      return { 
+        kind: "tridosha", 
+        title: "TRIDOSHA (VATA + PITTA + KAPHA)", 
+        primary: "vata", 
+        secondary: "pitta", 
+        tertiary: "kapha",
+        scores 
+      };
+    }
+    
     // Find the two highest scores for dual dosha
     const [first, secondHighest] = pairs;
     return { 
@@ -570,7 +590,18 @@ function getQuizScores() {
 function setDoshaFromScores(scores) {
   const dom = computeDominantDosha(scores);
 
-  if (dom.kind === "dual") {
+  if (dom.kind === "tridosha") {
+    state.dosha = {
+      kind: "tridosha",
+      title: dom.title,
+      about: doshaProfiles.tridosha.about,
+      diet: doshaProfiles.tridosha.diet,
+      primary: dom.primary,
+      secondary: dom.secondary,
+      tertiary: dom.tertiary,
+      scores: dom.scores,
+    };
+  } else if (dom.kind === "dual") {
     state.dosha = {
       kind: "dual",
       title: `${dom.primary.toUpperCase()} + ${dom.secondary.toUpperCase()}`,
