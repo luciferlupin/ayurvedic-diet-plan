@@ -858,6 +858,45 @@ function validateEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(email).trim());
 }
 
+function updateGamificationProgress() {
+  const bmiProgress = el("bmiProgress");
+  const doshaProgress = el("doshaProgress");
+  const planProgress = el("planProgress");
+  
+  if (!bmiProgress || !doshaProgress || !planProgress) return;
+  
+  // Check localStorage for completed steps
+  const bmiCompleted = localStorage.getItem("bmi") !== null;
+  const doshaCompleted = localStorage.getItem("dosha") !== null;
+  const planCompleted = localStorage.getItem("plan") !== null;
+  
+  // Update progress bars with animation
+  setTimeout(() => {
+    if (bmiCompleted) {
+      bmiProgress.style.width = "100%";
+    }
+    if (doshaCompleted) {
+      doshaProgress.style.width = "100%";
+    }
+    if (planCompleted) {
+      planProgress.style.width = "100%";
+    }
+  }, 500);
+  
+  // Listen for changes in localStorage
+  window.addEventListener('storage', (e) => {
+    if (e.key === 'bmi' && e.newValue !== null) {
+      bmiProgress.style.width = "100%";
+    }
+    if (e.key === 'dosha' && e.newValue !== null) {
+      doshaProgress.style.width = "100%";
+    }
+    if (e.key === 'plan' && e.newValue !== null) {
+      planProgress.style.width = "100%";
+    }
+  });
+}
+
 function init() {
   el("year").textContent = String(new Date().getFullYear());
 
@@ -868,6 +907,9 @@ function init() {
     mobileMenu.classList.toggle("hidden");
     mobileBtn.setAttribute("aria-expanded", String(!isOpen));
   });
+
+  // Initialize gamification progress bars
+  updateGamificationProgress();
 
   renderQuiz();
   renderConcerns();

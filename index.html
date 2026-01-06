@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dr. Shreya Gupta | Ayurvedic Diet & Wellness</title>
+    <title>AYURDIET | Ayurvedic Diet & Wellness</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -45,37 +45,162 @@
         color-scheme: light;
       }
       body {
-        background: radial-gradient(1200px 500px at 20% 0%, rgba(88, 129, 87, 0.18), transparent 55%),
+        background: 
+          /* Wood Branch Texture Overlay */
+          url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='wood-grain' width='400' height='400' patternUnits='userSpaceOnUse'%3E%3Cpath d='M0 200 Q100 180, 200 200 T400 200' stroke='%238B4513' stroke-width='3' fill='none' opacity='0.15'/%3E%3Cpath d='M0 150 Q100 130, 200 150 T400 150' stroke='%23A0522D' stroke-width='2' fill='none' opacity='0.12'/%3E%3Cpath d='M0 250 Q100 270, 200 250 T400 250' stroke='%238B4513' stroke-width='2' fill='none' opacity='0.1'/%3E%3Cpath d='M50 100 Q75 95, 100 100 T150 100' stroke='%23654321' stroke-width='1.5' fill='none' opacity='0.08'/%3E%3Cpath d='M250 300 Q275 295, 300 300 T350 300' stroke='%23A0522D' stroke-width='1.5' fill='none' opacity='0.1'/%3E%3Cpath d='M100 50 Q125 45, 150 50 T200 50' stroke='%238B4513' stroke-width='1' fill='none' opacity='0.06'/%3E%3Cpath d='M300 350 Q325 345, 350 350 T400 350' stroke='%23654321' stroke-width='1' fill='none' opacity='0.08'/%3E%3Cpath d='M0 100 Q50 90, 100 100' stroke='%23A0522D' stroke-width='1.5' fill='none' opacity='0.07'/%3E%3Cpath d='M300 200 Q350 190, 400 200' stroke='%238B4513' stroke-width='1.5' fill='none' opacity='0.09'/%3E%3Cpath d='M200 300 Q250 290, 300 300' stroke='%23654321' stroke-width='1' fill='none' opacity='0.06'/%3E%3Cpath d='M100 200 Q150 210, 200 200' stroke='%23A0522D' stroke-width='1' fill='none' opacity='0.08'/%3E%3C/pattern%3E%3Cfilter id='wood-texture'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.02' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.545 0 0 0 0 0.271 0 0 0 0 0.075 0 0 0 1 0'/%3E%3C/filter%3E%3C/defs%3E%3Crect width='400' height='400' fill='url(%23wood-grain)'/%3E%3Crect width='400' height='400' fill='none' filter='url(%23wood-texture)' opacity='0.15'/%3E%3C/svg%3E"),
+          radial-gradient(1200px 500px at 20% 0%, rgba(88, 129, 87, 0.18), transparent 55%),
           radial-gradient(900px 600px at 90% 10%, rgba(169, 132, 103, 0.18), transparent 50%),
           linear-gradient(180deg, #f7f3e6 0%, #f2e8cf 35%, #f7f3e6 100%);
+        background-size: 400px 400px, auto, auto, auto;
+        background-position: 0 0, 0 0, 0 0, 0 0;
         position: relative;
+        cursor: none;
       }
       
-      /* Enhanced natural texture overlay */
-      body::before {
-        content: '';
+      /* Wood texture for card backgrounds */
+      .bg-white\/60, .bg-earth-sand\/40, .bg-earth-sand\/50, .bg-gradient-to-br {
+        background-image: 
+          url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='wood-grain-small' width='200' height='200' patternUnits='userSpaceOnUse'%3E%3Cpath d='M0 100 Q50 90, 100 100 T200 100' stroke='%238B4513' stroke-width='1' fill='none' opacity='0.05'/%3E%3Cpath d='M0 75 Q50 65, 100 75 T200 75' stroke='%23A0522D' stroke-width='0.8' fill='none' opacity='0.04'/%3E%3Cpath d='M0 125 Q50 135, 100 125 T200 125' stroke='%23654321' stroke-width='0.8' fill='none' opacity='0.03'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='200' height='200' fill='url(%23wood-grain-small)'/%3E%3C/svg%3E"),
+          linear-gradient(to bottom right, var(--tw-gradient-stops));
+        background-size: 200px 200px, auto;
+        background-blend-mode: overlay;
+      }
+      
+      /* Global Animation Classes */
+      .fade-in-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .fade-in-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      .fade-in-left {
+        opacity: 0;
+        transform: translateX(-30px);
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .fade-in-left.visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      
+      .fade-in-right {
+        opacity: 0;
+        transform: translateX(30px);
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .fade-in-right.visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      
+      .scale-in {
+        opacity: 0;
+        transform: scale(0.9);
+        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .scale-in.visible {
+        opacity: 1;
+        transform: scale(1);
+      }
+      
+      .slide-in-bottom {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .slide-in-bottom.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      /* Section Animations */
+      .section-animate {
+        opacity: 0;
+        transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .section-animate.visible {
+        opacity: 1;
+      }
+      
+      /* Staggered animations for elements */
+      .stagger-1 { transition-delay: 0.1s; }
+      .stagger-2 { transition-delay: 0.2s; }
+      .stagger-3 { transition-delay: 0.3s; }
+      .stagger-4 { transition-delay: 0.4s; }
+      .stagger-5 { transition-delay: 0.5s; }
+      
+      /* Hover animations */
+      .hover-lift {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .hover-lift:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(47, 62, 70, 0.15);
+      }
+      
+      /* Pulse animation for CTAs */
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+      }
+      
+      .pulse-hover:hover {
+        animation: pulse 2s infinite;
+      }
+      
+      /* Floating animation */
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+      
+      .float-animation {
+        animation: float 6s ease-in-out infinite;
+      }
+      
+      /* Custom Cursor Leaf */
+      .cursor-leaf {
         position: fixed;
-        top: 0;
-        left: 0;
+        width: 40px;
+        height: 40px;
+        pointer-events: none;
+        z-index: 9999;
+        transition: transform 0.1s ease-out;
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+      
+      .cursor-leaf svg {
         width: 100%;
         height: 100%;
-        background-image: 
-          url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.03' fill='%238B7355'/%3E%3C/svg%3E"),
-          url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='fibers' width='200' height='200' patternUnits='userSpaceOnUse'%3E%3Cpath d='M20,50 Q60,30 100,50 T180,50' stroke='%23A98467' stroke-width='0.5' fill='none' opacity='0.03'/%3E%3Cpath d='M20,100 Q60,80 100,100 T180,100' stroke='%23A98467' stroke-width='0.5' fill='none' opacity='0.03'/%3E%3Cpath d='M20,150 Q60,130 100,150 T180,150' stroke='%23A98467' stroke-width='0.5' fill='none' opacity='0.03'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='200' height='200' fill='url(%23fibers)'/%3E%3C/svg%3E"),
-          linear-gradient(45deg, rgba(169, 132, 103, 0.02) 25%, transparent 25%),
-          linear-gradient(-45deg, rgba(169, 132, 103, 0.02) 25%, transparent 25%);
-        background-size: 100px 100px, 200px 200px, 40px 40px, 40px 40px;
-        background-position: 0 0, 0 0, 0 0, 20px 20px;
-        pointer-events: none;
-        z-index: 1;
-        mix-blend-mode: multiply;
+        filter: drop-shadow(0 2px 4px rgba(58, 90, 64, 0.2));
+        transition: transform 0.2s ease-out;
+      }
+      
+      .cursor-leaf.hovering svg {
+        transform: scale(1.2);
+      }
+      
+      /* Hide default cursor on interactive elements */
+      a, button, input, textarea, select, [role="button"] {
+        cursor: none !important;
       }
       
       .grain {
         position: fixed;
         inset: 0;
         pointer-events: none;
-        opacity: 0.06;
+        opacity: 0.04;
         mix-blend-mode: multiply;
         background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter><rect width="140" height="140" filter="url(%23n)" opacity="0.45"/></svg>');
         background-size: 160px 160px;
@@ -90,12 +215,11 @@
       /* Enhanced card textures */
       .shadow-soft {
         box-shadow: 0 12px 30px rgba(47, 62, 70, 0.14), 0 0 0 1px rgba(169, 132, 103, 0.05);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       }
       
-      /* Subtle paper texture for backgrounds */
-      .bg-white\/60, .bg-earth-sand\/40, .bg-earth-sand\/50 {
-        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.02' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23paper)' opacity='0.04' fill='%23FFFFFF'/%3E%3C/svg%3E");
-        background-blend-mode: overlay;
+      .shadow-soft:hover {
+        box-shadow: 0 16px 35px rgba(47, 62, 70, 0.18), 0 0 0 1px rgba(169, 132, 103, 0.08);
       }
       
       .section-anchor {
@@ -105,17 +229,31 @@
   </head>
 
   <body class="font-sans text-earth-forest">
+    <!-- Custom Cursor Leaf -->
+    <div class="cursor-leaf" id="cursorLeaf">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 15 C65 25, 75 40, 70 60 C65 80, 50 85, 35 75 C20 65, 15 45, 25 30 C35 15, 45 15, 50 15 Z" 
+              fill="#3A5A40" 
+              opacity="0.8"/>
+        <path d="M50 15 L50 85 M50 15 C42 22, 35 30, 32 42 M50 15 C58 22, 65 30, 68 42 M50 30 C40 35, 32 40, 28 50 M50 30 C60 35, 68 40, 72 50" 
+              stroke="#588157" 
+              stroke-width="1.5" 
+              fill="none" 
+              opacity="0.6"/>
+      </svg>
+    </div>
+    
     <div class="grain"></div>
 
     <header class="sticky top-0 z-40 backdrop-blur bg-earth-sand/65 border-b border-earth-clay/25">
       <div class="mx-auto max-w-6xl px-4 sm:px-6">
         <div class="flex h-16 items-center justify-between">
-          <a href="#" class="flex items-center gap-2">
-            <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-earth-moss text-earth-sand shadow-soft">
-              <span class="font-serif font-black">SG</span>
-            </span>
+          <a href="#top" class="flex items-center gap-3 text-earth-forest hover:text-earth-moss transition-colors">
+            <div class="h-10 w-10 rounded-xl overflow-hidden bg-gradient-to-br from-earth-moss to-earth-leaf flex items-center justify-center">
+              <img src="images/logo.jpeg" alt="AYURDIET Logo" class="h-full w-full object-cover" />
+            </div>
             <div class="leading-tight">
-              <div class="font-serif font-bold">Dr. Shreya Gupta</div>
+              <div class="font-serif font-bold bg-gradient-to-r from-earth-forest via-earth-moss to-earth-leaf bg-clip-text text-transparent">AYURDIET</div>
               <div class="text-xs text-earth-soil/80">Ayurvedic Diet & Wellness</div>
             </div>
           </a>
@@ -162,54 +300,163 @@
     </header>
 
     <main>
+      <!-- AYURDIET Brand Section -->
       <section class="section-anchor" id="top">
-        <div class="mx-auto max-w-6xl px-4 sm:px-6 py-12 sm:py-16">
-          <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
-            <div>
-              <p class="inline-flex items-center gap-2 rounded-full border border-earth-clay/35 bg-white/55 px-4 py-2 text-xs font-semibold text-earth-soil">
-                Personalized Ayurvedic diet plan based on <span class="text-earth-moss">BMI</span> + <span class="text-earth-moss">Dosha</span>
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 py-16 sm:py-20">
+          <div class="text-center">
+            <!-- AYURDIET Logo -->
+            <div class="inline-flex items-center justify-center mb-8 fade-in-up scale-in">
+              <div class="h-24 w-24 rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-earth-moss to-earth-leaf flex items-center justify-center float-animation">
+                <img src="images/logo.jpeg" alt="AYURDIET Logo" class="h-full w-full object-cover" />
+              </div>
+            </div>
+            
+            <!-- Brand Name -->
+            <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl font-black mb-6 tracking-tight bg-gradient-to-r from-earth-forest via-earth-moss to-earth-leaf bg-clip-text text-transparent fade-in-up stagger-1">
+              AYURDIET
+            </h1>
+            
+            <!-- Slogan -->
+            <div class="max-w-3xl mx-auto mb-8 fade-in-up stagger-2">
+              <p class="text-xl sm:text-2xl text-earth-soil/90 font-medium leading-relaxed">
+                "Transforming lives through ancient wisdom, modern science"
               </p>
-              <h1 class="mt-5 font-serif text-4xl sm:text-5xl font-black tracking-tight text-earth-forest">
-                Eat in harmony with your body & nature.
-              </h1>
-              <p class="mt-4 text-base sm:text-lg text-earth-soil/90 leading-relaxed">
-                Take the Dosha quiz, calculate your BMI, and get a gentle, practical diet plan you can actually follow. People usually come with concerns like acidity, bloating, constipation, weight changes, cravings, low energy, PCOS/thyroid support, and disturbed sleep—this helps you start with clarity.
-              </p>
+            </div>
+            
+            <!-- Tagline -->
+            <div class="inline-flex items-center gap-2 rounded-full border border-earth-clay/35 bg-white/55 px-6 py-3 mb-12 fade-in-up stagger-3">
+              <span class="text-sm font-semibold text-earth-soil">Personalized Ayurvedic diet plan based on</span>
+              <span class="text-sm font-semibold text-earth-moss">BMI</span>
+              <span class="text-sm font-semibold text-earth-soil">+</span>
+              <span class="text-sm font-semibold text-earth-moss">Dosha</span>
+            </div>
+            
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center fade-in-up stagger-4">
+              <a href="#bmi" class="inline-flex items-center justify-center rounded-xl bg-earth-moss px-8 py-4 text-base font-semibold text-earth-sand shadow-soft hover:bg-earth-leaf transition-all duration-300 transform hover:scale-105 pulse-hover">Start with BMI</a>
+              <a href="#dosha" class="inline-flex items-center justify-center rounded-xl border border-earth-clay/40 bg-white/60 px-8 py-4 text-base font-semibold hover:bg-earth-sand transition-all duration-300 transform hover:scale-105 pulse-hover">Take Dosha Quiz</a>
+            </div>
+            
+            <!-- Trust Indicators -->
+            <div class="mt-12 flex items-center justify-center gap-8 fade-in-up stagger-5">
+              <div class="text-center">
+                <div class="text-2xl font-bold text-earth-moss">15+</div>
+                <div class="text-sm text-earth-soil/70">Years Experience</div>
+              </div>
+              <div class="text-center">
+                <div class="text-2xl font-bold text-earth-moss">5000+</div>
+                <div class="text-sm text-earth-soil/70">Happy Clients</div>
+              </div>
+              <div class="text-center">
+                <div class="text-2xl font-bold text-earth-moss">98%</div>
+                <div class="text-sm text-earth-soil/70">Success Rate</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-              <div class="mt-7 flex flex-col sm:flex-row gap-3">
-                <a href="#bmi" class="inline-flex items-center justify-center rounded-xl bg-earth-moss px-5 py-3 text-sm font-semibold text-earth-sand shadow-soft hover:bg-earth-leaf">Start with BMI</a>
-                <a href="#dosha" class="inline-flex items-center justify-center rounded-xl border border-earth-clay/40 bg-white/60 px-5 py-3 text-sm font-semibold hover:bg-earth-sand">Take Dosha Quiz</a>
+      <!-- Original Hero Section with Brand Details -->
+      <section class="section-anchor" id="brand-details">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10">
+          <div class="grid gap-8 lg:gap-12">
+            <!-- Left Column - Hero Content -->
+            <div class="order-2 lg:order-1">
+              <!-- Hero Section -->
+              <div class="rounded-3xl border border-earth-clay/25 bg-gradient-to-br from-white/70 to-earth-sand/50 p-6 shadow-soft backdrop-blur-sm fade-in-left hover-lift">
+                <p class="inline-flex items-center gap-2 rounded-full border border-earth-clay/35 bg-white/55 px-4 py-2 text-xs font-semibold text-earth-soil">
+                  Personalized Ayurvedic diet plan based on <span class="text-earth-moss">BMI</span> + <span class="text-earth-moss">Dosha</span>
+                </p>
+                <h1 class="mt-5 font-serif text-4xl sm:text-5xl font-black tracking-tight text-earth-forest">
+                  Eat in harmony with your body & nature.
+                </h1>
+                <p class="mt-4 text-base sm:text-lg text-earth-soil/90 leading-relaxed">
+                  Take the Dosha quiz, calculate your BMI, and get a gentle, practical diet plan you can actually follow. People usually come with concerns like acidity, bloating, constipation, weight changes, cravings, low energy, PCOS/thyroid support, and disturbed sleep—this helps you start with clarity.
+                </p>
+
+                <!-- Gamification Progress Indicators -->
+                <div class="mt-6 rounded-2xl border border-earth-moss/25 bg-earth-moss/10 p-4 scale-in">
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="text-sm font-semibold text-earth-moss">Your Wellness Journey</span>
+                    <span class="text-xs text-earth-soil/80">Start here →</span>
+                  </div>
+                  <div class="flex gap-2">
+                    <div class="flex-1 h-2 rounded-full bg-earth-clay/30 overflow-hidden">
+                      <div class="h-full w-0 bg-earth-moss rounded-full transition-all duration-500" id="bmiProgress"></div>
+                    </div>
+                    <div class="flex-1 h-2 rounded-full bg-earth-clay/30 overflow-hidden">
+                      <div class="h-full w-0 bg-earth-moss rounded-full transition-all duration-500" id="doshaProgress"></div>
+                    </div>
+                    <div class="flex-1 h-2 rounded-full bg-earth-clay/30 overflow-hidden">
+                      <div class="h-full w-0 bg-earth-moss rounded-full transition-all duration-500" id="planProgress"></div>
+                    </div>
+                  </div>
+                  <div class="mt-2 flex justify-between text-xs text-earth-soil/70">
+                    <span>BMI</span>
+                    <span>Dosha</span>
+                    <span>Plan</span>
+                  </div>
+                </div>
+
+                <div class="mt-7 flex flex-col sm:flex-row gap-3 fade-in-up stagger-1">
+                  <a href="#bmi" class="inline-flex items-center justify-center rounded-xl bg-earth-moss px-5 py-3 text-sm font-semibold text-earth-sand shadow-soft hover:bg-earth-leaf transition-all duration-300 transform hover:scale-105 pulse-hover">Start with BMI</a>
+                  <a href="#dosha" class="inline-flex items-center justify-center rounded-xl border border-earth-clay/40 bg-white/60 px-5 py-3 text-sm font-semibold hover:bg-earth-sand transition-all duration-300 transform hover:scale-105 pulse-hover">Take Dosha Quiz</a>
+                </div>
+
+                <!-- Achievement Badges -->
+                <div class="mt-6 flex items-center gap-3 fade-in-up stagger-2">
+                  <div class="flex items-center gap-1 rounded-full bg-earth-sand/50 px-3 py-1.5 text-xs font-medium text-earth-soil/80 hover-lift">
+                    <svg class="h-3 w-3 text-earth-moss" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                    <span>Expert Guidance</span>
+                  </div>
+                  <div class="flex items-center gap-1 rounded-full bg-earth-sand/50 px-3 py-1.5 text-xs font-medium text-earth-soil/80 hover-lift">
+                    <svg class="h-3 w-3 text-earth-moss" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Personalized Plan</span>
+                  </div>
+                  <div class="flex items-center gap-1 rounded-full bg-earth-sand/50 px-3 py-1.5 text-xs font-medium text-earth-soil/80 hover-lift">
+                    <svg class="h-3 w-3 text-earth-moss" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Holistic Approach</span>
+                  </div>
+                </div>
               </div>
 
-              <dl class="mt-8 grid grid-cols-2 gap-4">
-                <div class="rounded-2xl border border-earth-clay/25 bg-white/60 p-4 shadow-soft">
+              <!-- Approach & Experience Cards -->
+              <dl class="mt-8 grid grid-cols-2 gap-4 fade-in-up stagger-3">
+                <div class="rounded-2xl border border-earth-clay/25 bg-white/60 p-4 shadow-soft hover-lift">
                   <dt class="text-xs font-semibold text-earth-soil/80">Approach</dt>
                   <dd class="mt-1 font-semibold">Ayurveda + modern guidance</dd>
                 </div>
-                <div class="rounded-2xl border border-earth-clay/25 bg-white/60 p-4 shadow-soft">
+                <div class="rounded-2xl border border-earth-clay/25 bg-white/60 p-4 shadow-soft hover-lift">
                   <dt class="text-xs font-semibold text-earth-soil/80">Experience</dt>
                   <dd class="mt-1 font-semibold">Lifestyle-friendly plans</dd>
                 </div>
               </dl>
             </div>
 
-            <div class="relative">
-              <div class="rounded-3xl border border-earth-clay/25 bg-white/60 p-6 shadow-soft">
+            <!-- Right Column - Results & Balance -->
+            <div class="order-1 lg:order-2">
+              <div class="rounded-3xl border border-earth-clay/25 bg-white/60 p-6 shadow-soft fade-in-right hover-lift">
                 <div class="flex items-center justify-between">
-                  <div class="font-serif text-xl font-bold">Today’s Balance</div>
+                  <div class="font-serif text-xl font-bold">Today's Balance</div>
                   <span class="rounded-full bg-earth-sand px-3 py-1 text-xs font-semibold text-earth-soil">Earth Theme</span>
                 </div>
 
                 <div class="mt-5 grid gap-4">
-                  <div class="rounded-2xl bg-earth-sand/70 p-4">
+                  <div class="rounded-2xl bg-earth-sand/70 p-4 scale-in">
                     <div class="text-xs font-semibold text-earth-soil/80">BMI Result</div>
                     <div id="heroBmi" class="mt-1 font-semibold">Not calculated yet</div>
                   </div>
-                  <div class="rounded-2xl bg-earth-sand/70 p-4">
+                  <div class="rounded-2xl bg-earth-sand/70 p-4 scale-in stagger-1">
                     <div class="text-xs font-semibold text-earth-soil/80">Dosha Result</div>
                     <div id="heroDosha" class="mt-1 font-semibold">Not taken yet</div>
                   </div>
-                  <div class="rounded-2xl bg-earth-moss/10 p-4 border border-earth-moss/25">
+                  <div class="rounded-2xl bg-earth-moss/10 p-4 border border-earth-moss/25 scale-in stagger-2">
                     <div class="text-xs font-semibold text-earth-soil/80">Personalized Plan</div>
                     <div id="heroPlan" class="mt-1 font-semibold">Complete both to unlock your plan</div>
                   </div>
@@ -228,29 +475,126 @@
         </div>
       </section>
 
-      <section class="section-anchor" id="bmi">
+      <!-- Bottom Video Section -->
+      <section class="section-anchor" id="healing-videos">
         <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10">
-          <div class="flex items-end justify-between gap-6 flex-wrap">
-            <div>
-              <h2 class="font-serif text-3xl font-black">BMI Calculator</h2>
-              <p class="mt-2 text-earth-soil/90">Enter your height and weight to calculate BMI and get a category. BMI is not the whole story, but it’s a useful starting point.</p>
+          <div class="text-center mb-8">
+            <h2 class="font-serif text-2xl font-bold text-earth-forest">Ancient Wisdom for Modern Healing</h2>
+            <p class="mt-2 text-earth-soil/90">Experience the transformative power of Ayurvedic medicine and natural healing practices</p>
+          </div>
+          
+          <div class="grid gap-6 lg:grid-cols-2">
+            <!-- Video 1 -->
+            <div class="rounded-3xl border border-earth-clay/25 bg-white/60 p-6 shadow-soft">
+              <div class="flex items-center justify-between mb-4">
+                <div class="font-serif text-lg font-bold text-earth-forest">Ayurvedic Medicine Principles</div>
+                <span class="rounded-full bg-earth-moss/20 px-3 py-1 text-xs font-semibold text-earth-moss">Educational</span>
+              </div>
+              <div class="overflow-hidden rounded-2xl border border-earth-clay/25 bg-black">
+                <div class="relative w-full" style="padding-top: 56.25%">
+                  <iframe
+                    class="absolute inset-0 h-full w-full"
+                    src="https://www.youtube.com/embed/-4cxLTdjBlE"
+                    title="What Is an Ayurvedic Diet? - Banyan Botanicals"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+              <div class="mt-4">
+                <p class="text-sm text-earth-soil/90 mb-3">Learn the fundamental principles of Ayurvedic diet and how they can transform your health naturally.</p>
+                <div class="flex items-center gap-4 text-xs text-earth-soil/70">
+                  <span class="flex items-center gap-1">
+                    <svg class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                      <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                    </svg>
+                    12.5K views
+                  </span>
+                  <span class="flex items-center gap-1">
+                    <svg class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                    </svg>
+                    8 min
+                  </span>
+                </div>
+              </div>
             </div>
-            <button id="bmiReset" class="rounded-xl border border-earth-clay/40 bg-white/60 px-4 py-2 text-sm font-semibold hover:bg-earth-sand">Reset</button>
+
+            <!-- Video 2 -->
+            <div class="rounded-3xl border border-earth-clay/25 bg-white/60 p-6 shadow-soft">
+              <div class="flex items-center justify-between mb-4">
+                <div class="font-serif text-lg font-bold text-earth-forest">Natural Healing Techniques</div>
+                <span class="rounded-full bg-earth-leaf/20 px-3 py-1 text-xs font-semibold text-earth-leaf">Practical</span>
+              </div>
+              <div class="overflow-hidden rounded-2xl border border-earth-clay/25 bg-black">
+                <div class="relative w-full" style="padding-top: 56.25%">
+                  <iframe
+                    class="absolute inset-0 h-full w-full"
+                    src="https://www.youtube.com/embed/vS0dKPtMTPQ"
+                    title="Food Combinations in Ayurveda - Nityanandam Shree"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+              <div class="mt-4">
+                <p class="text-sm text-earth-soil/90 mb-3">Master the art of proper food combinations according to Ayurveda for better digestion and health.</p>
+                <div class="flex items-center gap-4 text-xs text-earth-soil/70">
+                  <span class="flex items-center gap-1">
+                    <svg class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                      <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                    </svg>
+                    8.7K views
+                  </span>
+                  <span class="flex items-center gap-1">
+                    <svg class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                    </svg>
+                    15 min
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 text-center">
+            <a href="#videos" class="inline-flex items-center justify-center rounded-xl bg-earth-moss px-6 py-3 text-sm font-semibold text-earth-sand shadow-soft hover:bg-earth-leaf transition-colors">
+              Explore More Videos
+              <svg class="h-4 w-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-anchor section-animate" id="bmi">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10">
+          <div class="flex items-end justify-between gap-6 flex-wrap fade-in-up">
+            <div class="fade-in-left">
+              <h2 class="font-serif text-3xl font-black">BMI Calculator</h2>
+              <p class="mt-2 text-earth-soil/90">Enter your height and weight to calculate BMI and get a category. BMI is not the whole story, but it's a useful starting point.</p>
+            </div>
+            <button id="bmiReset" class="fade-in-right rounded-xl border border-earth-clay/40 bg-white/60 px-4 py-2 text-sm font-semibold hover:bg-earth-sand transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-soft">Reset</button>
           </div>
 
           <div class="mt-6 grid gap-6 lg:grid-cols-2">
-            <form id="bmiForm" class="rounded-3xl border border-earth-clay/25 bg-white/60 p-6 shadow-soft">
+            <form id="bmiForm" class="rounded-3xl border border-earth-clay/25 bg-white/60 p-6 shadow-soft hover-lift transition-all duration-300">
               <div class="grid gap-4 sm:grid-cols-2">
                 <div>
                   <label class="text-sm font-semibold" for="heightCm">Height (cm)</label>
-                  <input class="mt-2 w-full rounded-xl border border-earth-clay/35 bg-white/80 px-4 py-3 outline-none focus:ring-2 focus:ring-earth-moss" id="heightCm" name="heightCm" inputmode="decimal" placeholder="e.g. 170" required />
+                  <input class="mt-2 w-full rounded-xl border border-earth-clay/35 bg-white/80 px-4 py-3 outline-none focus:ring-2 focus:ring-earth-moss transition-all duration-300 transform focus:-translate-y-0.5" id="heightCm" name="heightCm" inputmode="decimal" placeholder="e.g. 170" required />
                 </div>
                 <div>
                   <label class="text-sm font-semibold" for="weightKg">Weight (kg)</label>
-                  <input class="mt-2 w-full rounded-xl border border-earth-clay/35 bg-white/80 px-4 py-3 outline-none focus:ring-2 focus:ring-earth-moss" id="weightKg" name="weightKg" inputmode="decimal" placeholder="e.g. 65" required />
+                  <input class="mt-2 w-full rounded-xl border border-earth-clay/35 bg-white/80 px-4 py-3 outline-none focus:ring-2 focus:ring-earth-moss transition-all duration-300 transform focus:-translate-y-0.5" id="weightKg" name="weightKg" inputmode="decimal" placeholder="e.g. 65" required />
                 </div>
               </div>
-              <button class="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-earth-moss px-5 py-3 text-sm font-semibold text-earth-sand shadow-soft hover:bg-earth-leaf" type="submit">
+              <button class="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-earth-moss px-5 py-3 text-sm font-semibold text-earth-sand shadow-soft hover:bg-earth-leaf transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg" type="submit">
                 Calculate BMI
               </button>
             </form>
@@ -258,15 +602,15 @@
             <div class="rounded-3xl border border-earth-clay/25 bg-white/60 p-6 shadow-soft">
               <h3 class="font-serif text-xl font-bold">Your BMI Summary</h3>
               <div class="mt-4 grid gap-3">
-                <div class="rounded-2xl bg-earth-sand/70 p-4">
+                <div class="rounded-2xl bg-earth-sand/70 p-4 transition-all duration-300 hover:bg-earth-sand/90">
                   <div class="text-xs font-semibold text-earth-soil/80">BMI</div>
                   <div id="bmiValue" class="mt-1 text-2xl font-black">—</div>
                 </div>
-                <div class="rounded-2xl bg-earth-sand/70 p-4">
+                <div class="rounded-2xl bg-earth-sand/70 p-4 transition-all duration-300 hover:bg-earth-sand/90">
                   <div class="text-xs font-semibold text-earth-soil/80">Category</div>
                   <div id="bmiCategory" class="mt-1 font-semibold">—</div>
                 </div>
-                <div class="rounded-2xl bg-earth-moss/10 p-4 border border-earth-moss/25">
+                <div class="rounded-2xl bg-earth-moss/10 p-4 border border-earth-moss/25 transition-all duration-300 hover:bg-earth-moss/20">
                   <div class="text-xs font-semibold text-earth-soil/80">Ayurvedic Note</div>
                   <div id="bmiAyurveda" class="mt-1 text-sm text-earth-soil/90">Calculate BMI to see guidance.</div>
                 </div>
@@ -276,20 +620,20 @@
         </div>
       </section>
 
-      <section class="section-anchor" id="dosha">
+      <section class="section-anchor section-animate" id="dosha">
         <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10">
-          <div class="flex items-end justify-between gap-6 flex-wrap">
-            <div>
+          <div class="flex items-end justify-between gap-6 flex-wrap fade-in-up">
+            <div class="fade-in-left">
               <h2 class="font-serif text-3xl font-black">Dosha Quiz</h2>
               <p class="mt-2 text-earth-soil/90">Answer honestly based on your usual tendencies (not your best days). This quiz is educational and helps identify your dominant pattern.</p>
             </div>
-            <button id="doshaReset" class="rounded-xl border border-earth-clay/40 bg-white/60 px-4 py-2 text-sm font-semibold hover:bg-earth-sand">Reset</button>
+            <button id="doshaReset" class="fade-in-right rounded-xl border border-earth-clay/40 bg-white/60 px-4 py-2 text-sm font-semibold hover:bg-earth-sand transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-soft">Reset</button>
           </div>
 
           <div class="mt-6 grid gap-6 lg:grid-cols-2">
-            <div class="rounded-3xl border border-earth-clay/25 bg-white/60 p-6 shadow-soft">
+            <div class="rounded-3xl border border-earth-clay/25 bg-white/60 p-6 shadow-soft hover-lift transition-all duration-300">
               <form id="doshaForm" class="grid gap-5"></form>
-              <button id="doshaSubmit" class="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-earth-moss px-5 py-3 text-sm font-semibold text-earth-sand shadow-soft hover:bg-earth-leaf" type="button">
+              <button id="doshaSubmit" class="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-earth-moss px-5 py-3 text-sm font-semibold text-earth-sand shadow-soft hover:bg-earth-leaf transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg" type="button">
                 Get Dosha Result
               </button>
             </div>
@@ -297,15 +641,15 @@
             <div class="rounded-3xl border border-earth-clay/25 bg-white/60 p-6 shadow-soft">
               <h3 class="font-serif text-xl font-bold">Your Dosha Summary</h3>
               <div class="mt-4 grid gap-3">
-                <div class="rounded-2xl bg-earth-sand/70 p-4">
+                <div class="rounded-2xl bg-earth-sand/70 p-4 transition-all duration-300 hover:bg-earth-sand/90">
                   <div class="text-xs font-semibold text-earth-soil/80">Dominant Dosha</div>
                   <div id="doshaType" class="mt-1 text-2xl font-black">—</div>
                 </div>
-                <div class="rounded-2xl bg-earth-sand/70 p-4">
+                <div class="rounded-2xl bg-earth-sand/70 p-4 transition-all duration-300 hover:bg-earth-sand/90">
                   <div class="text-xs font-semibold text-earth-soil/80">About</div>
                   <div id="doshaAbout" class="mt-1 text-sm text-earth-soil/90">Take the quiz to see your description.</div>
                 </div>
-                <div class="rounded-2xl bg-earth-moss/10 p-4 border border-earth-moss/25">
+                <div class="rounded-2xl bg-earth-moss/10 p-4 border border-earth-moss/25 transition-all duration-300 hover:bg-earth-moss/20">
                   <div class="text-xs font-semibold text-earth-soil/80">Diet Focus</div>
                   <div id="doshaDiet" class="mt-1 text-sm text-earth-soil/90">Your food focus will appear here.</div>
                 </div>
@@ -336,15 +680,15 @@
               </div>
 
               <div class="mt-5 grid gap-4">
-                <div class="rounded-2xl bg-earth-sand/70 p-4">
+                <div class="rounded-2xl bg-earth-sand/70 p-4 transition-all duration-300 hover:bg-earth-sand/90">
                   <div class="text-xs font-semibold text-earth-soil/80">What to Favor</div>
                   <ul id="planFavor" class="mt-2 grid gap-2 text-sm"></ul>
                 </div>
-                <div class="rounded-2xl bg-earth-sand/70 p-4">
+                <div class="rounded-2xl bg-earth-sand/70 p-4 transition-all duration-300 hover:bg-earth-sand/90">
                   <div class="text-xs font-semibold text-earth-soil/80">What to Reduce</div>
                   <ul id="planReduce" class="mt-2 grid gap-2 text-sm"></ul>
                 </div>
-                <div class="rounded-2xl bg-earth-moss/10 p-4 border border-earth-moss/25">
+                <div class="rounded-2xl bg-earth-moss/10 p-4 border border-earth-moss/25 transition-all duration-300 hover:bg-earth-moss/20">
                   <div class="text-xs font-semibold text-earth-soil/80">Simple Daily Rhythm</div>
                   <ul id="planRoutine" class="mt-2 grid gap-2 text-sm"></ul>
                 </div>
@@ -356,19 +700,19 @@
               <p class="mt-1 text-sm text-earth-soil/85">Use this as a gentle template.</p>
 
               <div class="mt-4 grid gap-3">
-                <div class="rounded-2xl bg-earth-sand/70 p-4">
+                <div class="rounded-2xl bg-earth-sand/70 p-4 transition-all duration-300 hover:bg-earth-sand/90">
                   <div class="text-xs font-semibold text-earth-soil/80">Breakfast</div>
                   <div id="planBreakfast" class="mt-1 text-sm">—</div>
                 </div>
-                <div class="rounded-2xl bg-earth-sand/70 p-4">
+                <div class="rounded-2xl bg-earth-sand/70 p-4 transition-all duration-300 hover:bg-earth-sand/90">
                   <div class="text-xs font-semibold text-earth-soil/80">Lunch</div>
                   <div id="planLunch" class="mt-1 text-sm">—</div>
                 </div>
-                <div class="rounded-2xl bg-earth-sand/70 p-4">
+                <div class="rounded-2xl bg-earth-sand/70 p-4 transition-all duration-300 hover:bg-earth-sand/90">
                   <div class="text-xs font-semibold text-earth-soil/80">Dinner</div>
                   <div id="planDinner" class="mt-1 text-sm">—</div>
                 </div>
-                <div class="rounded-2xl bg-earth-moss/10 p-4 border border-earth-moss/25">
+                <div class="rounded-2xl bg-earth-moss/10 p-4 border border-earth-moss/25 transition-all duration-300 hover:bg-earth-moss/20">
                   <div class="text-xs font-semibold text-earth-soil/80">Next Step</div>
                   <div class="mt-1 text-sm">For deeper personalization, share your goals, schedule, sleep, digestion, and medical history via the contact form.</div>
                 </div>
@@ -449,7 +793,7 @@
         <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10">
           <div class="grid gap-8 lg:grid-cols-2 lg:items-start">
             <div>
-              <h2 class="font-serif text-3xl font-black">Contact Dr. Shreya Gupta</h2>
+              <h2 class="font-serif text-3xl font-black">Contact AYURDIET</h2>
               <p class="mt-2 text-earth-soil/90">Share your details to request a personalized diet plan consultation.</p>
 
               <div class="mt-6 flex flex-wrap gap-3">
@@ -528,7 +872,7 @@
         <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10">
           <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div>
-              <div class="font-serif font-bold">Dr. Shreya Gupta</div>
+              <div class="font-serif font-bold">AYURDIET</div>
               <div class="text-sm text-earth-soil/80">Ayurvedic Diet & Wellness</div>
               <div class="mt-2 flex flex-wrap gap-3">
                 <a href="tel:+917986906855" class="inline-flex items-center text-sm text-earth-soil/75 hover:text-earth-moss transition-colors">
@@ -552,5 +896,149 @@
     </main>
 
     <script src="main.js"></script>
+
+    <script>
+      // Custom Cursor Leaf
+      const cursorLeaf = document.getElementById('cursorLeaf');
+      let mouseX = 0, mouseY = 0;
+      let leafX = 0, leafY = 0;
+      let rotation = 0;
+      let targetRotation = 0;
+      
+      // Update mouse position
+      document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        
+        // Calculate rotation based on movement
+        const deltaX = e.movementX || 0;
+        targetRotation += deltaX * 0.5;
+      });
+      
+      // Smooth animation loop
+      function animateLeaf() {
+        // Smooth following with easing
+        const ease = 0.15;
+        leafX += (mouseX - leafX) * ease;
+        leafY += (mouseY - leafY) * ease;
+        
+        // Smooth rotation
+        const rotationEase = 0.1;
+        rotation += (targetRotation - rotation) * rotationEase;
+        
+        // Apply position and rotation
+        cursorLeaf.style.transform = `translate(${leafX}px, ${leafY}px) rotate(${rotation}deg)`;
+        
+        requestAnimationFrame(animateLeaf);
+      }
+      
+      // Start animation
+      animateLeaf();
+      
+      // Add hover effect for interactive elements
+      const interactiveElements = document.querySelectorAll('a, button, input, textarea, select, [role="button"]');
+      
+      interactiveElements.forEach(element => {
+        element.addEventListener('mouseenter', () => {
+          cursorLeaf.classList.add('hovering');
+        });
+        
+        element.addEventListener('mouseleave', () => {
+          cursorLeaf.classList.remove('hovering');
+        });
+      });
+      
+      // Hide cursor when it leaves the window
+      document.addEventListener('mouseleave', () => {
+        cursorLeaf.style.opacity = '0';
+      });
+      
+      document.addEventListener('mouseenter', () => {
+        cursorLeaf.style.opacity = '1';
+      });
+
+      // Scroll Animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            
+            // Trigger staggered animations for child elements
+            const staggeredElements = entry.target.querySelectorAll('[class*="stagger-"]');
+            staggeredElements.forEach((el, index) => {
+              setTimeout(() => {
+                el.classList.add('visible');
+              }, index * 100);
+            });
+          }
+        });
+      }, observerOptions);
+
+      // Observe all animated elements
+      const animatedElements = document.querySelectorAll(
+        '.fade-in-up, .fade-in-left, .fade-in-right, .scale-in, .slide-in-bottom, .section-animate'
+      );
+      
+      animatedElements.forEach(el => {
+        observer.observe(el);
+      });
+
+      // Trigger initial animations for elements already in view
+      const triggerInitialAnimations = () => {
+        const elementsInView = document.querySelectorAll(
+          '.fade-in-up, .fade-in-left, .fade-in-right, .scale-in, .slide-in-bottom, .section-animate'
+        );
+        
+        elementsInView.forEach(el => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            el.classList.add('visible');
+            
+            // Trigger staggered animations
+            const staggeredElements = el.querySelectorAll('[class*="stagger-"]');
+            staggeredElements.forEach((child, index) => {
+              setTimeout(() => {
+                child.classList.add('visible');
+              }, index * 100);
+            });
+          }
+        });
+      };
+
+      // Run initial animations after page load
+      window.addEventListener('load', () => {
+        setTimeout(triggerInitialAnimations, 100);
+      });
+
+      // Smooth scroll behavior for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+
+      // Add parallax effect to floating elements
+      window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const parallaxElements = document.querySelectorAll('.float-animation');
+        
+        parallaxElements.forEach(el => {
+          const speed = 0.5;
+          el.style.transform = `translateY(${scrolled * speed}px)`;
+        });
+      });
+    </script>
   </body>
 </html>
