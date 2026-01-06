@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr. Shreya Gupta | Ayurvedic Diet & Wellness</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet" />
+
+    <script>
+      window.tailwind = window.tailwind || {};
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui"],
+              serif: ["Merriweather", "ui-serif", "Georgia"],
+            },
+            colors: {
+              earth: {
+                sand: "#F2E8CF",
+                clay: "#A98467",
+                soil: "#6B4F3A",
+                moss: "#3A5A40",
+                forest: "#2F3E46",
+                leaf: "#588157",
+                sky: "#E9F5FF",
+              },
+            },
+            boxShadow: {
+              soft: "0 12px 30px rgba(47, 62, 70, 0.14)",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      :root {
+        color-scheme: light;
+      }
+      body {
+        background: radial-gradient(1200px 500px at 20% 0%, rgba(88, 129, 87, 0.18), transparent 55%),
+          radial-gradient(900px 600px at 90% 10%, rgba(169, 132, 103, 0.18), transparent 50%),
+          linear-gradient(180deg, #f7f3e6 0%, #f2e8cf 35%, #f7f3e6 100%);
+      }
+      .grain {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.08;
+        mix-blend-mode: multiply;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter><rect width="140" height="140" filter="url(%23n)" opacity="0.45"/></svg>');
+        background-size: 160px 160px;
+      }
+      .section-anchor {
+        scroll-margin-top: 92px;
+      }
+    </style>
+  </head>
+
+  <body class="font-sans text-earth-forest">
+    <div class="grain"></div>
+
+    <header class="sticky top-0 z-40 backdrop-blur bg-earth-sand/65 border-b border-earth-clay/25">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="flex h-16 items-center justify-between">
+          <a href="#" class="flex items-center gap-2">
+            <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-earth-moss text-earth-sand shadow-soft">
+              <span class="font-serif font-black">SG</span>
+            </span>
+            <div class="leading-tight">
+              <div class="font-serif font-bold">Dr. Shreya Gupta</div>
+              <div class="text-xs text-earth-soil/80">Ayurvedic Diet & Wellness</div>
+            </div>
+          </a>
+
+          <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+            <a class="hover:text-earth-moss" href="#bmi">BMI</a>
+            <a class="hover:text-earth-moss" href="#dosha">Dosha Quiz</a>
+            <a class="hover:text-earth-moss" href="#plan">Your Plan</a>
+            <a class="hover:text-earth-moss" href="#concerns">Concerns</a>
+            <a class="hover:text-earth-moss" href="#recipes">Recipes</a>
+            <a class="hover:text-earth-moss" href="#videos">Videos</a>
+            <a class="hover:text-earth-moss" href="#testimonials">Testimonials</a>
+            <a class="hover:text-earth-moss" href="#contact">Contact</a>
+          </nav>
+
+          <a href="#contact" class="hidden sm:inline-flex items-center justify-center rounded-xl bg-earth-moss px-4 py-2 text-sm font-semibold text-earth-sand shadow-soft hover:bg-earth-leaf">
+            Book Consultation
+          </a>
+
+          <button id="mobileMenuBtn" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-xl border border-earth-clay/30 bg-earth-sand/80" aria-label="Open menu" aria-expanded="false">
+            <span class="sr-only">Open menu</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 6H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <path d="M4 12H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <path d="M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+
+        <div id="mobileMenu" class="md:hidden hidden pb-4">
+          <div class="grid gap-2 rounded-2xl border border-earth-clay/25 bg-white/60 p-3">
+            <a class="rounded-xl px-3 py-2 hover:bg-earth-sand" href="#bmi">BMI</a>
+            <a class="rounded-xl px-3 py-2 hover:bg-earth-sand" href="#dosha">Dosha Quiz</a>
+            <a class="rounded-xl px-3 py-2 hover:bg-earth-sand" href="#plan">Your Plan</a>
+            <a class="rounded-xl px-3 py-2 hover:bg-earth-sand" href="#concerns">Concerns</a>
+            <a class="rounded-xl px-3 py-2 hover:bg-earth-sand" href="#recipes">Recipes</a>
+            <a class="rounded-xl px-3 py-2 hover:bg-earth-sand" href="#videos">Videos</a>
+            <a class="rounded-xl px-3 py-2 hover:bg-earth-sand" href="#testimonials">Testimonials</a>
+            <a class="rounded-xl px-3 py-2 hover:bg-earth-sand" href="#contact">Contact</a>
+            <a class="mt-1 inline-flex items-center justify-center rounded-xl bg-earth-moss px-4 py-2 text-sm font-semibold text-earth-sand shadow-soft hover:bg-earth-leaf" href="#contact">Book Consultation</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-anchor" id="top">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 py-12 sm:py-16">
+          <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+            <div>
+              <p class="inline-flex items-center gap-2 rounded-full border border-earth-clay/35 bg-white/55 px-4 py-2 text-xs font-semibold text-earth-soil">
+                Personalized Ayurvedic diet plan based on <span class="text-earth-moss">BMI</span> + <span class="text-earth-moss">Dosha</span>
+              </p>
+              <h1 class="mt-5 font-serif text-4xl sm:text-5xl font-black tracking-tight text-earth-forest">
+                Eat in harmony with your body & nature.
+              </h1>
+              <p class="mt-4 text-base sm:text-lg text-earth-soil/90 leading-relaxed">
+                Take the Dosha quiz, calculate your BMI, and get a gentle, practical diet plan you can actually follow. People usually come with concerns like acidity, bloating, constipation, weight changes, cravings, low energy, PCOS/thyroid support, and disturbed sleep—this helps you start with clarity.
+              </p>
+
+              <div class="mt-7 flex flex-col sm:flex-row gap-3">
+                <a href="#bmi" class="inline-flex items-center justify-center rounded-xl bg-earth-moss px-5 py-3 text-sm font-semibold text-earth-sand shadow-soft hover:bg-earth-leaf">Start with BMI</a>
+                <a href="#dosha" class="inline-flex items-center justify-center rounded-xl border border-earth-clay/40 bg-white/60 px-5 py-3 text-sm font-semibold hover:bg-earth-sand">Take Dosha Quiz</a>
+              </div>
+
+              <dl class="mt-8 grid grid-cols-2 gap-4">
+                <div class="rounded-2xl border border-earth-clay/25 bg-white/60 p-4 shadow-soft">
+                  <dt class="text-xs font-semibold text-earth-soil/80">Approach</dt>
+                  <dd class="mt-1 font-semibold">Ayurveda + modern guidance</dd>
+                </div>
+                <div class="rounded-2xl border border-earth-clay/25 bg-white/60 p-4 shadow-soft">
+                  <dt class="text-xs font-semibold text-earth-soil/80">Experience</dt>
+                  <dd class="mt-1 font-semibold">Lifestyle-friendly plans</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="relative">
+              <div class="rounded-3xl border border-earth-clay/25 bg-white/60 p-6 shadow-soft">
+                <div class="flex items-center justify-between">
+                  <div class="font-serif text-xl font-bold">Today’s Balance</div>
+                  <span class="rounded-full bg-earth-sand px-3 py-1 text-xs font-semibold text-earth-soil">Earth Theme</span>
+                </div>
+
+                <div class="mt-5 grid gap-4">
+                  <div class="rounded-2xl bg-earth-sand/70 p-4">
+                    <div class="text-xs font-semibold text-earth-soil/80">BMI Result</div>
+                    <div id="heroBmi" class="mt-1 font-semibold">Not calculated yet</div>
+                  </div>
+                  <div class="rounded-2xl bg-earth-sand/70 p-4">
+                    <div class="text-xs font-semibold text-earth-soil/80">Dosha Result</div>
+                    <div id="heroDosha" class="mt-1 font-semibold">Not taken yet</div>
+                  </div>
+                  <div class="rounded-2xl bg-earth-moss/10 p-4 border border-earth-moss/25">
+                    <div class="text-xs font-semibold text-earth-soil/80">Personalized Plan</div>
+                    <div id="heroPlan" class="mt-1 font-semibold">Complete both to unlock your plan</div>
+                  </div>
+                </div>
+
+                <p class="mt-4 text-xs text-earth-soil/80 leading-relaxed">
+                  Note: This is educational guidance. For medical conditions, pregnancy, or chronic illness, consult your healthcare provider.
+                </p>
+              </div>
+
+              <div class="absolute -bottom-8 -right-6 hidden lg:block">
+                <div class="h-28 w-28 rounded-[2.5rem] bg-earth-clay/35 blur-2xl"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-anchor" id="bmi">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10">
+          <div class="flex items-end justify-between gap-6 flex-wrap">
+            <div>
+              <h2 class="font-serif text-3xl font-black">BMI Calculator</h2>
+              <p class="mt-2 text-earth-soil/90">Enter your height and weight to calculate BMI and get a category. BMI is not the whole story, but it’s a useful starting point.</p>
+            </div>
+            <button id="bmiReset" class="rounded-xl border border-earth-clay/40 bg-white/60 px-4 py-2 text-sm font-semibold hover:bg-earth-sand">Reset</button>
+          </div>
+
+          <div class="mt-6 grid gap-6 lg:grid-cols-2">
+            <form id="bmiForm" class="rounded-3xl border border-earth-clay/25 bg-white/60 p-6 shadow-soft">
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label class="text-sm font-semibold" for="heightCm">Height (cm)</label>
+                  <input class="mt-2 w-full rounded-xl border border-earth-clay/35 bg-white/80 px-4 py-3 outline-none focus:ring-2 focus:ring-earth-moss" id="heightCm" name="heightCm" inputmode="decimal" placeholder="e.g. 170" required />
+                </div>
+                <div>
+                  <label class="text-sm font-semibold" for="weightKg">Weight (kg)</label>
+                  <input class="mt-2 w-full rounded-xl border border-earth-clay/35 bg-white/80 px-4 py-3 outline-none focus:ring-2 focus:ring-earth-moss" id="weightKg" name="weightKg" inputmode="decimal" placeholder="e.g. 65" required />
+                </div>
+              </div>
+              <button class="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-earth-moss px-5 py-3 text-sm font-semibold text-earth-sand shadow-soft hover:bg-earth-leaf" type="submit">
+                Calculate BMI
+              </button>
+            </form>
+
+            <div class="rounded-3xl border border-earth-clay/25 bg-white/60 p-6 shadow-soft">
+              <h3 class="font-serif text-xl font-bold">Your BMI Summary</h3>
+              <div class="mt-4 grid gap-3">
+                <div class="rounded-2xl bg-earth-sand/70 p-4">
+                  <div class="text-xs font-semibold text-earth-soil/80">BMI</div>
+                  <div id="bmiValue" class="mt-1 text-2xl font-black">—</div>
+                </div>
+                <div class="rounded-2xl bg-earth-sand/70 p-4">
+                  <div class="text-xs font-semibold text-earth-soil/80">Category</div>
+                  <div id="bmiCategory" class="mt-1 font-semibold">—</div>
+                </div>
+                <div class="rounded-2xl bg-earth-moss/10 p-4 border border-earth-moss/25">
+                  <div class="text-xs font-semibold text-earth-soil/80">Ayurvedic Note</div>
+                  <div id="bmiAyurveda" class="mt-1 text-sm text-earth-soil/90">Calculate BMI to see guidance.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-anchor" id="dosha">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10">
+          <div class="flex items-end justify-between gap-6 flex-wrap">
+            <div>
+              <h2 class="font-serif text-3xl font-black">Dosha Quiz</h2>
+              <p class="mt-2 text-earth-soil/90">Answer honestly based on your usual tendencies (not your best days). This quiz is educational and helps identify your dominant pattern.</p>
+            </div>
+            <button id="doshaReset" class="rounded-xl border border-earth-clay/40 bg-white/60 px-4 py-2 text-sm font-semibold hover:bg-earth-sand">Reset</button>
+          </div>
+
+          <div class="mt-6 grid gap-6 lg:grid-cols-2">
+            <div class="rounded-3xl border border-earth-clay/25 bg-white/60 p-6 shadow-soft">
+              <form id="doshaForm" class="grid gap-5"></form>
+              <button id="doshaSubmit" class="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-earth-moss px-5 py-3 text-sm font-semibold text-earth-sand shadow-soft hover:bg-earth-leaf" type="button">
+                Get Dosha Result
+              </button>
+            </div>
+
+            <div class="rounded-3xl border border-earth-clay/25 bg-white/60 p-6 shadow-soft">
+              <h3 class="font-serif text-xl font-bold">Your Dosha Summary</h3>
+              <div class="mt-4 grid gap-3">
+                <div class="rounded-2xl bg-earth-sand/70 p-4">
+                  <div class="text-xs font-semibold text-earth-soil/80">Dominant Dosha</div>
+                  <div id="doshaType" class="mt-1 text-2xl font-black">—</div>
+                </div>
+                <div class="rounded-2xl bg-earth-sand/70 p-4">
+                  <div class="text-xs font-semibold text-earth-soil/80">About</div>
+                  <div id="doshaAbout" class="mt-1 text-sm text-earth-soil/90">Take the quiz to see your description.</div>
+                </div>
+                <div class="rounded-2xl bg-earth-moss/10 p-4 border border-earth-moss/25">
+                  <div class="text-xs font-semibold text-earth-soil/80">Diet Focus</div>
+                  <div id="doshaDiet" class="mt-1 text-sm text-earth-soil/90">Your food focus will appear here.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-anchor" id="plan">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10">
+          <div class="flex items-end justify-between gap-6 flex-wrap">
+            <div>
+              <h2 class="font-serif text-3xl font-black">Your Personalized Diet Plan</h2>
+              <p class="mt-2 text-earth-soil/90">Generated using your BMI + Dosha results.</p>
+            </div>
+            <button id="planRefresh" class="rounded-xl border border-earth-clay/40 bg-white/60 px-4 py-2 text-sm font-semibold hover:bg-earth-sand">Refresh Plan</button>
+          </div>
+
+          <div class="mt-6 grid gap-6 lg:grid-cols-3">
+            <div class="lg:col-span-2 rounded-3xl border border-earth-clay/25 bg-white/60 p-6 shadow-soft">
+              <div class="flex items-start justify-between gap-4 flex-wrap">
+                <div>
+                  <h3 class="font-serif text-xl font-bold">Plan Summary</h3>
+                  <p id="planSubtitle" class="mt-1 text-sm text-earth-soil/85">Complete BMI and Dosha to generate a plan.</p>
+                </div>
+                <span id="planBadge" class="hidden rounded-full bg-earth-moss px-3 py-1 text-xs font-semibold text-earth-sand">Ready</span>
+              </div>
+
+              <div class="mt-5 grid gap-4">
+                <div class="rounded-2xl bg-earth-sand/70 p-4">
+                  <div class="text-xs font-semibold text-earth-soil/80">What to Favor</div>
+                  <ul id="planFavor" class="mt-2 grid gap-2 text-sm"></ul>
+                </div>
+                <div class="rounded-2xl bg-earth-sand/70 p-4">
+                  <div class="text-xs font-semibold text-earth-soil/80">What to Reduce</div>
+                  <ul id="planReduce" class="mt-2 grid gap-2 text-sm"></ul>
+                </div>
+                <div class="rounded-2xl bg-earth-moss/10 p-4 border border-earth-moss/25">
+                  <div class="text-xs font-semibold text-earth-soil/80">Simple Daily Rhythm</div>
+                  <ul id="planRoutine" class="mt-2 grid gap-2 text-sm"></ul>
+                </div>
+              </div>
+            </div>
+
+            <aside class="rounded-3xl border border-earth-clay/25 bg-white/60 p-6 shadow-soft">
+              <h3 class="font-serif text-xl font-bold">One-Day Sample</h3>
+              <p class="mt-1 text-sm text-earth-soil/85">Use this as a gentle template.</p>
+
+              <div class="mt-4 grid gap-3">
+                <div class="rounded-2xl bg-earth-sand/70 p-4">
+                  <div class="text-xs font-semibold text-earth-soil/80">Breakfast</div>
+                  <div id="planBreakfast" class="mt-1 text-sm">—</div>
+                </div>
+                <div class="rounded-2xl bg-earth-sand/70 p-4">
+                  <div class="text-xs font-semibold text-earth-soil/80">Lunch</div>
+                  <div id="planLunch" class="mt-1 text-sm">—</div>
+                </div>
+                <div class="rounded-2xl bg-earth-sand/70 p-4">
+                  <div class="text-xs font-semibold text-earth-soil/80">Dinner</div>
+                  <div id="planDinner" class="mt-1 text-sm">—</div>
+                </div>
+                <div class="rounded-2xl bg-earth-moss/10 p-4 border border-earth-moss/25">
+                  <div class="text-xs font-semibold text-earth-soil/80">Next Step</div>
+                  <div class="mt-1 text-sm">For deeper personalization, share your goals, schedule, sleep, digestion, and medical history via the contact form.</div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-anchor" id="concerns">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10">
+          <div>
+            <h2 class="font-serif text-3xl font-black">Common Concerns Patients Ask About</h2>
+            <p class="mt-2 text-earth-soil/90">These are everyday concerns we hear most often. Your plan above gives a starting direction; the consultation helps personalize it to your schedule, digestion, and medical history.</p>
+          </div>
+
+          <div class="mt-6 grid gap-6 lg:grid-cols-2">
+            <div class="rounded-3xl border border-earth-clay/25 bg-white/60 p-6 shadow-soft">
+              <h3 class="font-serif text-xl font-bold">Most common concerns</h3>
+              <p class="mt-1 text-sm text-earth-soil/85">Tap a card for a quick overview.</p>
+              <div class="mt-4 grid gap-3 sm:grid-cols-2" id="concernsGrid"></div>
+            </div>
+
+            <div class="rounded-3xl border border-earth-clay/25 bg-white/60 p-6 shadow-soft">
+              <h3 class="font-serif text-xl font-bold">FAQ</h3>
+              <p class="mt-1 text-sm text-earth-soil/85">Clear, practical answers to the questions people ask before starting.</p>
+              <div class="mt-4 grid gap-3" id="faqGrid"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-anchor" id="recipes">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10">
+          <div>
+            <h2 class="font-serif text-3xl font-black">Ayurvedic Recipes</h2>
+            <p class="mt-2 text-earth-soil/90">Simple, nourishing recipes aligned with Dosha balance.</p>
+          </div>
+
+          <div class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3" id="recipesGrid"></div>
+        </div>
+      </section>
+
+      <section class="section-anchor" id="videos">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10">
+          <div>
+            <h2 class="font-serif text-3xl font-black">YouTube Videos from Top Ayurveda Experts</h2>
+            <p class="mt-2 text-earth-soil/90">Curated content from best Ayurveda YouTube channels including Dr. Shreya Gupta, Jiva Ayurveda, Nityanandam Shree, and other renowned practitioners. Learn about diet, lifestyle, and holistic wellness.</p>
+            <div class="mt-4 flex flex-wrap gap-3">
+              <a href="https://youtube.com/@dr.shreyagupta8862?si=axzF_sIr9h9PNM9A" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-xl bg-earth-moss px-4 py-2 text-sm font-semibold text-earth-sand shadow-soft hover:bg-earth-leaf">
+                Dr. Shreya Gupta Channel
+              </a>
+              <a href="https://www.youtube.com/channel/UCmV9qrqre8WwXk3I8zXqY4A" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-xl border border-earth-clay/40 bg-white/60 px-4 py-2 text-sm font-semibold hover:bg-earth-sand">
+                Jiva Ayurveda
+              </a>
+              <a href="https://www.youtube.com/channel/UCw1jqPPpOVzrt2tJMO6bQmw" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-xl border border-earth-clay/40 bg-white/60 px-4 py-2 text-sm font-semibold hover:bg-earth-sand">
+                Nityanandam Ayurveda
+              </a>
+            </div>
+          </div>
+
+          <div class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3" id="videosGrid"></div>
+        </div>
+      </section>
+
+      <section class="section-anchor" id="testimonials">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10">
+          <div>
+            <h2 class="font-serif text-3xl font-black">Client Success Stories</h2>
+            <p class="mt-2 text-earth-soil/90">Real experiences from people who transformed their health through personalized Ayurvedic guidance.</p>
+          </div>
+
+          <div class="mt-6 grid gap-6 lg:grid-cols-2" id="testimonialsGrid"></div>
+        </div>
+      </section>
+
+      <section class="section-anchor" id="contact">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10">
+          <div class="grid gap-8 lg:grid-cols-2 lg:items-start">
+            <div>
+              <h2 class="font-serif text-3xl font-black">Contact Dr. Shreya Gupta</h2>
+              <p class="mt-2 text-earth-soil/90">Share your details to request a personalized diet plan consultation.</p>
+
+              <div class="mt-6 flex flex-wrap gap-3">
+                <a href="tel:+917986906855" class="inline-flex items-center justify-center rounded-xl bg-earth-moss px-4 py-3 text-sm font-semibold text-earth-sand shadow-soft hover:bg-earth-leaf transition-colors">
+                  <svg class="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                  </svg>
+                  Call Now
+                </a>
+                <a href="https://wa.me/917986906855?text=Hi%20Dr.%20Shreya%20Gupta,%20I'm%20interested%20in%20a%20personalized%20Ayurvedic%20diet%20plan" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-xl border border-earth-clay/40 bg-white/60 px-4 py-3 text-sm font-semibold hover:bg-earth-sand transition-colors">
+                  <svg class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                  </svg>
+                  WhatsApp
+                </a>
+              </div>
+            </div>
+            <div class="rounded-3xl border border-earth-clay/25 bg-white/60 p-6 shadow-soft">
+              <form id="contactForm" class="grid gap-4">
+                <div class="grid gap-4 sm:grid-cols-2">
+                  <div>
+                    <label class="text-sm font-semibold" for="cName">Full Name</label>
+                    <input id="cName" name="cName" required class="mt-2 w-full rounded-xl border border-earth-clay/35 bg-white/80 px-4 py-3 outline-none focus:ring-2 focus:ring-earth-moss" placeholder="Your name" />
+                  </div>
+                  <div>
+                    <label class="text-sm font-semibold" for="cEmail">Email</label>
+                    <input id="cEmail" name="cEmail" type="email" required class="mt-2 w-full rounded-xl border border-earth-clay/35 bg-white/80 px-4 py-3 outline-none focus:ring-2 focus:ring-earth-moss" placeholder="you@example.com" />
+                  </div>
+                </div>
+
+                <div class="grid gap-4 sm:grid-cols-2">
+                  <div>
+                    <label class="text-sm font-semibold" for="cPhone">Phone (optional)</label>
+                    <input id="cPhone" name="cPhone" class="mt-2 w-full rounded-xl border border-earth-clay/35 bg-white/80 px-4 py-3 outline-none focus:ring-2 focus:ring-earth-moss" placeholder="+91..." />
+                  </div>
+                  <div>
+                    <label class="text-sm font-semibold" for="cGoal">Primary Goal</label>
+                    <select id="cGoal" name="cGoal" required class="mt-2 w-full rounded-xl border border-earth-clay/35 bg-white/80 px-4 py-3 outline-none focus:ring-2 focus:ring-earth-moss">
+                      <option value="">Select</option>
+                      <option>Weight balance</option>
+                      <option>Better digestion</option>
+                      <option>Energy & focus</option>
+                      <option>Skin & hair</option>
+                      <option>Women's wellness</option>
+                      <option>General lifestyle</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="text-sm font-semibold" for="cMessage">Message</label>
+                  <textarea id="cMessage" name="cMessage" rows="4" class="mt-2 w-full rounded-xl border border-earth-clay/35 bg-white/80 px-4 py-3 outline-none focus:ring-2 focus:ring-earth-moss" placeholder="Tell us about your routine, sleep, digestion, cravings, and any medical conditions."></textarea>
+                </div>
+
+                <div class="rounded-2xl border border-earth-moss/25 bg-earth-moss/10 p-4">
+                  <div class="text-xs font-semibold text-earth-soil/80">Auto-filled from your results</div>
+                  <div class="mt-1 text-sm">
+                    <span class="font-semibold">BMI:</span> <span id="contactBmi">—</span>
+                    <span class="mx-2 text-earth-soil/50">|</span>
+                    <span class="font-semibold">Dosha:</span> <span id="contactDosha">—</span>
+                  </div>
+                </div>
+
+                <button type="submit" class="inline-flex w-full items-center justify-center rounded-xl bg-earth-moss px-5 py-3 text-sm font-semibold text-earth-sand shadow-soft hover:bg-earth-leaf">
+                  Request Personalized Plan
+                </button>
+
+                <p id="contactStatus" class="text-sm text-earth-soil/90"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="border-t border-earth-clay/25 bg-white/30">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div>
+              <div class="font-serif font-bold">Dr. Shreya Gupta</div>
+              <div class="text-sm text-earth-soil/80">Ayurvedic Diet & Wellness</div>
+              <div class="mt-2 flex flex-wrap gap-3">
+                <a href="tel:+917986906855" class="inline-flex items-center text-sm text-earth-soil/75 hover:text-earth-moss transition-colors">
+                  <svg class="h-4 w-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                  </svg>
+                  +91 79869 06855
+                </a>
+                <a href="https://wa.me/917986906855" target="_blank" rel="noreferrer" class="inline-flex items-center text-sm text-earth-soil/75 hover:text-earth-moss transition-colors">
+                  <svg class="h-4 w-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                  </svg>
+                  WhatsApp
+                </a>
+              </div>
+            </div>
+            <div class="text-sm text-earth-soil/75">© <span id="year"></span> All rights reserved.</div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
