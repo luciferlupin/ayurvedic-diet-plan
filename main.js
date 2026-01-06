@@ -12,99 +12,123 @@ const state = {
 
 const doshaQuiz = [
   {
-    q: "Body build",
+    q: "What is your body frame?",
     options: [
-      { text: "Slim, light frame", scores: { vata: 2, pitta: 0, kapha: 0 } },
-      { text: "Medium, athletic", scores: { vata: 0, pitta: 2, kapha: 0 } },
-      { text: "Solid, broader build", scores: { vata: 0, pitta: 0, kapha: 2 } },
+      { text: "Thin, light, hard to gain weight", scores: { vata: 1, pitta: 0, kapha: 0 } },
+      { text: "Medium, athletic, proportional", scores: { vata: 0, pitta: 1, kapha: 0 } },
+      { text: "Broad, solid, gains weight easily", scores: { vata: 0, pitta: 0, kapha: 1 } },
     ],
   },
   {
-    q: "Skin",
+    q: "How would you describe your skin texture?",
     options: [
-      { text: "Dry, rough", scores: { vata: 2, pitta: 0, kapha: 0 } },
-      { text: "Warm, prone to redness", scores: { vata: 0, pitta: 2, kapha: 0 } },
-      { text: "Soft, oily", scores: { vata: 0, pitta: 0, kapha: 2 } },
+      { text: "Dry and rough", scores: { vata: 1, pitta: 0, kapha: 0 } },
+      { text: "Warm and oily", scores: { vata: 0, pitta: 1, kapha: 0 } },
+      { text: "Smooth and moist", scores: { vata: 0, pitta: 0, kapha: 1 } },
     ],
   },
   {
-    q: "Appetite",
+    q: "What is your hair type?",
     options: [
-      { text: "Irregular, can forget to eat", scores: { vata: 2, pitta: 0, kapha: 0 } },
-      { text: "Strong and steady", scores: { vata: 0, pitta: 2, kapha: 0 } },
-      { text: "Slow, can skip meals easily", scores: { vata: 0, pitta: 0, kapha: 2 } },
+      { text: "Dry, rough, scanty", scores: { vata: 1, pitta: 0, kapha: 0 } },
+      { text: "Thin, straight, greys early, baldness", scores: { vata: 0, pitta: 1, kapha: 0 } },
+      { text: "Thick, shiny, lush", scores: { vata: 0, pitta: 0, kapha: 1 } },
     ],
   },
   {
-    q: "Temperature preference",
+    q: "How is your appetite?",
     options: [
-      { text: "Dislike cold, love warmth", scores: { vata: 2, pitta: 0, kapha: 0 } },
-      { text: "Feel warm easily", scores: { vata: 0, pitta: 2, kapha: 0 } },
-      { text: "Prefer warmth but tolerate cold", scores: { vata: 0, pitta: 0, kapha: 2 } },
+      { text: "Irregular, sometimes strong sometimes low", scores: { vata: 1, pitta: 0, kapha: 0 } },
+      { text: "Strong and sharp, irritation if meals are delayed", scores: { vata: 0, pitta: 1, kapha: 0 } },
+      { text: "Slow but steady, can skip meals", scores: { vata: 0, pitta: 0, kapha: 1 } },
     ],
   },
   {
-    q: "Energy levels",
+    q: "How is your digestion?",
     options: [
-      { text: "Bursts of energy, then tired", scores: { vata: 2, pitta: 0, kapha: 0 } },
-      { text: "Intense and focused", scores: { vata: 0, pitta: 2, kapha: 0 } },
-      { text: "Steady and enduring", scores: { vata: 0, pitta: 0, kapha: 2 } },
+      { text: "Gas, bloating, irregular digestion", scores: { vata: 1, pitta: 0, kapha: 0 } },
+      { text: "Fast digestion, acidity, burning sensation", scores: { vata: 0, pitta: 1, kapha: 0 } },
+      { text: "Slow digestion, heaviness after meals", scores: { vata: 0, pitta: 0, kapha: 1 } },
     ],
   },
   {
-    q: "Sleep",
+    q: "How do you feel in cold weather?",
     options: [
-      { text: "Light, easily disturbed", scores: { vata: 2, pitta: 0, kapha: 0 } },
-      { text: "Moderate, can wake from heat", scores: { vata: 0, pitta: 2, kapha: 0 } },
-      { text: "Deep, long", scores: { vata: 0, pitta: 0, kapha: 2 } },
+      { text: "Very uncomfortable", scores: { vata: 1, pitta: 0, kapha: 0 } },
+      { text: "Neutral", scores: { vata: 0, pitta: 1, kapha: 0 } },
+      { text: "Comfortable", scores: { vata: 0, pitta: 0, kapha: 1 } },
     ],
   },
   {
-    q: "Digestion",
+    q: "How do you feel in hot weather?",
     options: [
-      { text: "Gas, bloating", scores: { vata: 2, pitta: 0, kapha: 0 } },
-      { text: "Acidity, burning", scores: { vata: 0, pitta: 2, kapha: 0 } },
-      { text: "Heaviness, slow digestion", scores: { vata: 0, pitta: 0, kapha: 2 } },
+      { text: "Generally okay", scores: { vata: 1, pitta: 0, kapha: 0 } },
+      { text: "Very uncomfortable", scores: { vata: 0, pitta: 1, kapha: 0 } },
+      { text: "Tolerates well but feels lazy", scores: { vata: 0, pitta: 0, kapha: 1 } },
     ],
   },
   {
-    q: "Stress response",
+    q: "What is your energy level?",
     options: [
-      { text: "Anxiety, worry", scores: { vata: 2, pitta: 0, kapha: 0 } },
-      { text: "Irritability", scores: { vata: 0, pitta: 2, kapha: 0 } },
-      { text: "Withdrawal, overeating", scores: { vata: 0, pitta: 0, kapha: 2 } },
+      { text: "Comes in bursts, fluctuates", scores: { vata: 1, pitta: 0, kapha: 0 } },
+      { text: "High, focused, intense", scores: { vata: 0, pitta: 1, kapha: 0 } },
+      { text: "Steady, long-lasting", scores: { vata: 0, pitta: 0, kapha: 1 } },
     ],
   },
   {
-    q: "Bowel habits",
+    q: "How is your sleep?",
     options: [
-      { text: "Dry stools / constipation", scores: { vata: 2, pitta: 0, kapha: 0 } },
-      { text: "Loose stools / acidity", scores: { vata: 0, pitta: 2, kapha: 0 } },
-      { text: "Sluggish, heavy after meals", scores: { vata: 0, pitta: 0, kapha: 2 } },
+      { text: "Light, disturbed", scores: { vata: 1, pitta: 0, kapha: 0 } },
+      { text: "Moderate, refreshing", scores: { vata: 0, pitta: 1, kapha: 0 } },
+      { text: "Deep, long", scores: { vata: 0, pitta: 0, kapha: 1 } },
     ],
   },
   {
-    q: "Cravings",
+    q: "How do you react under stress?",
     options: [
-      { text: "Warm, salty, crunchy snacks", scores: { vata: 2, pitta: 0, kapha: 0 } },
-      { text: "Spicy, sour foods", scores: { vata: 0, pitta: 2, kapha: 0 } },
-      { text: "Sweet, dairy, comfort foods", scores: { vata: 0, pitta: 0, kapha: 2 } },
+      { text: "Anxiety, fear, overthinking", scores: { vata: 1, pitta: 0, kapha: 0 } },
+      { text: "Anger, irritation", scores: { vata: 0, pitta: 1, kapha: 0 } },
+      { text: "Calm but withdrawn", scores: { vata: 0, pitta: 0, kapha: 1 } },
     ],
   },
   {
-    q: "Mind & mood",
+    q: "What is your learning style?",
     options: [
-      { text: "Overthinking, restlessness", scores: { vata: 2, pitta: 0, kapha: 0 } },
-      { text: "Competitive, easily annoyed", scores: { vata: 0, pitta: 2, kapha: 0 } },
-      { text: "Calm but can feel low/motivated less", scores: { vata: 0, pitta: 0, kapha: 2 } },
+      { text: "Quick to learn, quick to forget", scores: { vata: 1, pitta: 0, kapha: 0 } },
+      { text: "Learns fast, remembers when useful", scores: { vata: 0, pitta: 1, kapha: 0 } },
+      { text: "Slow learner, never forgets", scores: { vata: 0, pitta: 0, kapha: 1 } },
     ],
   },
   {
-    q: "Typical response to fasting / skipping meals",
+    q: "How do you make decisions?",
     options: [
-      { text: "Feel shaky, anxious, low energy", scores: { vata: 2, pitta: 0, kapha: 0 } },
-      { text: "Get irritable / headache / acidity", scores: { vata: 0, pitta: 2, kapha: 0 } },
-      { text: "Mostly fine, appetite reduces", scores: { vata: 0, pitta: 0, kapha: 2 } },
+      { text: "Quickly, often changes mind", scores: { vata: 1, pitta: 0, kapha: 0 } },
+      { text: "Confident, decisive", scores: { vata: 0, pitta: 1, kapha: 0 } },
+      { text: "Takes time, prefers security", scores: { vata: 0, pitta: 0, kapha: 1 } },
+    ],
+  },
+  {
+    q: "How is your speech pattern?",
+    options: [
+      { text: "Fast, talkative", scores: { vata: 1, pitta: 0, kapha: 0 } },
+      { text: "Sharp, clear", scores: { vata: 0, pitta: 1, kapha: 0 } },
+      { text: "Slow, calm", scores: { vata: 0, pitta: 0, kapha: 1 } },
+    ],
+  },
+  {
+    q: "How do you handle money?",
+    options: [
+      { text: "Impulsive spending", scores: { vata: 1, pitta: 0, kapha: 0 } },
+      { text: "Planned, goal-oriented", scores: { vata: 0, pitta: 1, kapha: 0 } },
+      { text: "Conservative, saves more", scores: { vata: 0, pitta: 0, kapha: 1 } },
+    ],
+  },
+  {
+    q: "What is your working style?",
+    options: [
+      { text: "Many projects, multitasking", scores: { vata: 1, pitta: 0, kapha: 0 } },
+      { text: "Perfectionist, leadership-oriented", scores: { vata: 0, pitta: 1, kapha: 0 } },
+      { text: "Stable, dislikes frequent change", scores: { vata: 0, pitta: 0, kapha: 1 } },
     ],
   },
 ];

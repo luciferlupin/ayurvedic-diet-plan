@@ -54,7 +54,6 @@
         background-size: 400px 400px, auto, auto, auto;
         background-position: 0 0, 0 0, 0 0, 0 0;
         position: relative;
-        cursor: none;
       }
       
       /* Wood texture for card backgrounds */
@@ -169,33 +168,7 @@
         animation: float 6s ease-in-out infinite;
       }
       
-      /* Custom Cursor Leaf */
-      .cursor-leaf {
-        position: fixed;
-        width: 40px;
-        height: 40px;
-        pointer-events: none;
-        z-index: 9999;
-        transition: transform 0.1s ease-out;
-        transform: translate(-50%, -50%) rotate(0deg);
-      }
-      
-      .cursor-leaf svg {
-        width: 100%;
-        height: 100%;
-        filter: drop-shadow(0 2px 4px rgba(58, 90, 64, 0.2));
-        transition: transform 0.2s ease-out;
-      }
-      
-      .cursor-leaf.hovering svg {
-        transform: scale(1.2);
-      }
-      
-      /* Hide default cursor on interactive elements */
-      a, button, input, textarea, select, [role="button"] {
-        cursor: none !important;
-      }
-      
+            
       .grain {
         position: fixed;
         inset: 0;
@@ -229,20 +202,6 @@
   </head>
 
   <body class="font-sans text-earth-forest">
-    <!-- Custom Cursor Leaf -->
-    <div class="cursor-leaf" id="cursorLeaf">
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <path d="M50 15 C65 25, 75 40, 70 60 C65 80, 50 85, 35 75 C20 65, 15 45, 25 30 C35 15, 45 15, 50 15 Z" 
-              fill="#3A5A40" 
-              opacity="0.8"/>
-        <path d="M50 15 L50 85 M50 15 C42 22, 35 30, 32 42 M50 15 C58 22, 65 30, 68 42 M50 30 C40 35, 32 40, 28 50 M50 30 C60 35, 68 40, 72 50" 
-              stroke="#588157" 
-              stroke-width="1.5" 
-              fill="none" 
-              opacity="0.6"/>
-      </svg>
-    </div>
-    
     <div class="grain"></div>
 
     <header class="sticky top-0 z-40 backdrop-blur bg-earth-sand/65 border-b border-earth-clay/25">
@@ -250,7 +209,7 @@
         <div class="flex h-16 items-center justify-between">
           <a href="#top" class="flex items-center gap-3 text-earth-forest hover:text-earth-moss transition-colors">
             <div class="h-10 w-10 rounded-xl overflow-hidden bg-gradient-to-br from-earth-moss to-earth-leaf flex items-center justify-center">
-              <img src="images/logo.jpeg" alt="AYURDIET Logo" class="h-full w-full object-cover" />
+              <img src="./WhatsApp Image 2026-01-06 at 12.30.50.jpeg" alt="AYURDIET Logo" class="h-full w-full object-cover" />
             </div>
             <div class="leading-tight">
               <div class="font-serif font-bold bg-gradient-to-r from-earth-forest via-earth-moss to-earth-leaf bg-clip-text text-transparent">AYURDIET</div>
@@ -306,13 +265,13 @@
           <div class="text-center">
             <!-- AYURDIET Logo -->
             <div class="inline-flex items-center justify-center mb-8 fade-in-up scale-in">
-              <div class="h-24 w-24 rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-earth-moss to-earth-leaf flex items-center justify-center float-animation">
-                <img src="images/logo.jpeg" alt="AYURDIET Logo" class="h-full w-full object-cover" />
+              <div class="h-32 w-32 rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-earth-moss to-earth-leaf flex items-center justify-center float-animation">
+                <img src="./WhatsApp Image 2026-01-06 at 12.30.50.jpeg" alt="AYURDIET Logo" class="h-full w-full object-cover" />
               </div>
             </div>
             
             <!-- Brand Name -->
-            <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl font-black mb-6 tracking-tight bg-gradient-to-r from-earth-forest via-earth-moss to-earth-leaf bg-clip-text text-transparent fade-in-up stagger-1">
+            <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl font-black mb-6 tracking-tight fade-in-up stagger-1 visible" style="background: linear-gradient(135deg, #3A5A40 0%, #588157 50%, #3A5A40 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
               AYURDIET
             </h1>
             
@@ -357,7 +316,7 @@
       </section>
 
       <!-- Original Hero Section with Brand Details -->
-      <section class="section-anchor" id="brand-details">
+      <section class="section-anchor" id="brand-details" style="background: linear-gradient(135deg, #f7f3e6 0%, #e8f5e8 50%, #f0f8e8 100%);">
         <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10">
           <div class="grid gap-8 lg:gap-12">
             <!-- Left Column - Hero Content -->
@@ -572,7 +531,7 @@
         </div>
       </section>
 
-      <section class="section-anchor section-animate" id="bmi">
+      <section class="section-anchor section-animate" id="bmi" style="background: linear-gradient(135deg, #e8f5e8 0%, #f0f8e8 50%, #f7f3e6 100%);">
         <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10">
           <div class="flex items-end justify-between gap-6 flex-wrap fade-in-up">
             <div class="fade-in-left">
@@ -620,7 +579,7 @@
         </div>
       </section>
 
-      <section class="section-anchor section-animate" id="dosha">
+      <section class="section-anchor section-animate" id="dosha" style="background: linear-gradient(135deg, #f0f8e8 0%, #f7f3e6 50%, #e8f5e8 100%);">
         <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10">
           <div class="flex items-end justify-between gap-6 flex-wrap fade-in-up">
             <div class="fade-in-left">
@@ -659,7 +618,7 @@
         </div>
       </section>
 
-      <section class="section-anchor" id="plan">
+      <section class="section-anchor" id="plan" style="background: linear-gradient(135deg, #e8f5e8 0%, #f0f8e8 50%, #f7f3e6 100%);">
         <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10">
           <div class="flex items-end justify-between gap-6 flex-wrap">
             <div>
@@ -722,7 +681,7 @@
         </div>
       </section>
 
-      <section class="section-anchor" id="concerns">
+      <section class="section-anchor" id="concerns" style="background: linear-gradient(135deg, #f7f3e6 0%, #e8f5e8 50%, #f0f8e8 100%);">
         <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10">
           <div>
             <h2 class="font-serif text-3xl font-black">Common Concerns Patients Ask About</h2>
@@ -745,7 +704,7 @@
         </div>
       </section>
 
-      <section class="section-anchor" id="recipes">
+      <section class="section-anchor" id="recipes" style="background: linear-gradient(135deg, #f0f8e8 0%, #f7f3e6 50%, #e8f5e8 100%);">
         <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10">
           <div>
             <h2 class="font-serif text-3xl font-black">Ayurvedic Recipes</h2>
@@ -778,7 +737,7 @@
         </div>
       </section>
 
-      <section class="section-anchor" id="testimonials">
+      <section class="section-anchor" id="testimonials" style="background: linear-gradient(135deg, #e8f5e8 0%, #f0f8e8 50%, #f7f3e6 100%);">
         <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10">
           <div>
             <h2 class="font-serif text-3xl font-black">Client Success Stories</h2>
@@ -789,7 +748,7 @@
         </div>
       </section>
 
-      <section class="section-anchor" id="contact">
+      <section class="section-anchor" id="contact" style="background: linear-gradient(135deg, #f7f3e6 0%, #e8f5e8 50%, #f0f8e8 100%);">
         <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10">
           <div class="grid gap-8 lg:grid-cols-2 lg:items-start">
             <div>
@@ -898,65 +857,6 @@
     <script src="main.js"></script>
 
     <script>
-      // Custom Cursor Leaf
-      const cursorLeaf = document.getElementById('cursorLeaf');
-      let mouseX = 0, mouseY = 0;
-      let leafX = 0, leafY = 0;
-      let rotation = 0;
-      let targetRotation = 0;
-      
-      // Update mouse position
-      document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        
-        // Calculate rotation based on movement
-        const deltaX = e.movementX || 0;
-        targetRotation += deltaX * 0.5;
-      });
-      
-      // Smooth animation loop
-      function animateLeaf() {
-        // Smooth following with easing
-        const ease = 0.15;
-        leafX += (mouseX - leafX) * ease;
-        leafY += (mouseY - leafY) * ease;
-        
-        // Smooth rotation
-        const rotationEase = 0.1;
-        rotation += (targetRotation - rotation) * rotationEase;
-        
-        // Apply position and rotation
-        cursorLeaf.style.transform = `translate(${leafX}px, ${leafY}px) rotate(${rotation}deg)`;
-        
-        requestAnimationFrame(animateLeaf);
-      }
-      
-      // Start animation
-      animateLeaf();
-      
-      // Add hover effect for interactive elements
-      const interactiveElements = document.querySelectorAll('a, button, input, textarea, select, [role="button"]');
-      
-      interactiveElements.forEach(element => {
-        element.addEventListener('mouseenter', () => {
-          cursorLeaf.classList.add('hovering');
-        });
-        
-        element.addEventListener('mouseleave', () => {
-          cursorLeaf.classList.remove('hovering');
-        });
-      });
-      
-      // Hide cursor when it leaves the window
-      document.addEventListener('mouseleave', () => {
-        cursorLeaf.style.opacity = '0';
-      });
-      
-      document.addEventListener('mouseenter', () => {
-        cursorLeaf.style.opacity = '1';
-      });
-
       // Scroll Animations
       const observerOptions = {
         threshold: 0.1,
