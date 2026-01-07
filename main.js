@@ -219,27 +219,27 @@ const doshaProfiles = {
     about:
       "Vata is light, dry, and mobile. When balanced it supports creativity and quick thinking. When imbalanced it may show as dryness, anxiety, irregular appetite, and bloating.",
     diet:
-      "🌸 Vata Daily Diet Plan: Favor warm, cooked, soft, slightly oily foods with sweet, sour & salty tastes. Daily schedule: Early morning - 1 glass warm water + optional 1 tsp ghee or 5 soaked raisins. Breakfast (8-9 AM) - vegetable oats porridge with ghee, moong dal chilla, stewed fruits with cinnamon, or idli with ghee. Mid-morning - banana/papaya/apple or soaked almonds (5-6). Lunch (main meal) - rice/soft chapati + moong/masoor dal + cooked vegetables (bottle gourd, pumpkin, carrot, beetroot) + 1 tsp ghee. Evening snack - roasted makhana or warm herbal tea (ginger-fennel). Dinner (by 7:30-8 PM) - vegetable soup + chapati, khichdi with ghee, or steamed veggies + dal. Before bed - warm turmeric milk. Best foods: rice, wheat, oats, pumpkin, carrot, beetroot, banana, mango, papaya, moong dal, paneer, ghee. Use spices: ginger, cumin, coriander, fennel, hing. Avoid: raw salads, dry snacks, cold drinks, excess coffee, bitter gourd. Lifestyle: eat at fixed times, sleep before 10:30 PM, daily oil massage with sesame oil, gentle yoga. 🍗 Non-Veg for Vata: Most suitable - chicken (soup, stew, curry), mutton/lamb (small portions, well cooked), eggs (boiled, omelette with ghee), freshwater fish (rohu, catla), sea fish (salmon, pomfret). Avoid: dry fried meats, processed meats, very spicy tandoori, leftover meat. Best cooking: soups, stews, light curries, bone broth, khichdi with chicken. Use spices: ginger, garlic, cumin, coriander, fennel, turmeric, hing. Sample non-veg day: breakfast - vegetable omelette in ghee; lunch - chicken curry with rice; dinner - chicken soup or fish curry. Extra tips: eat at regular times, never skip meals, avoid cold drinks with meat.",
+      "🌸 Vata Daily Diet Plan: Favor warm, cooked, soft, slightly oily foods with sweet, sour & salty tastes. Daily schedule: Early morning - 1 glass warm water + optional 1 tsp ghee or 5 soaked raisins. Breakfast (8-9 AM) - vegetable oats porridge with ghee, moong dal chilla, stewed fruits with cinnamon, idli with ghee, or ragi porridge with ghee. Mid-morning - banana/papaya/apple or soaked almonds (5-6) or walnuts (3-4). Lunch (main meal) - rice/soft chapati + moong/masoor dal + cooked vegetables (bottle gourd, pumpkin, carrot, beetroot, spinach) + 1 tsp ghee + side salad with lemon dressing. Evening snack - roasted makhana, warm herbal tea (ginger-fennel), or sweet potato chaat. Dinner (by 7:30-8 PM) - vegetable soup + chapati, khichdi with ghee, steamed veggies + dal, or millet porridge. Before bed - warm turmeric milk or almond milk. Best foods: rice, wheat, oats, ragi, jowar, pumpkin, carrot, beetroot, sweet potato, spinach, bottle gourd, banana, mango, papaya, grapes, cherries, moong dal, masoor dal, urad dal, paneer, ghee, sesame oil, almonds, walnuts. Use spices: ginger, cumin, coriander, fennel, hing, turmeric, cardamom, cinnamon. Avoid: raw salads, dry snacks, cold drinks, excess coffee, bitter gourd, refined flour, processed foods. Lifestyle: eat at fixed times, sleep before 10:30 PM, daily oil massage with sesame oil, gentle yoga, avoid overexertion. Additional recommendations: Drink warm water throughout the day, include healthy fats daily, avoid fasting, eat 3 main meals + 1-2 snacks, chew food thoroughly, practice mindful eating. 🍗 Non-Veg for Vata: Most suitable - chicken (soup, stew, curry), mutton/lamb (small portions, well cooked), eggs (boiled, omelette with ghee), freshwater fish (rohu, catla, singhara), sea fish (salmon, pomfret, sardines). Avoid: dry fried meats, processed meats, very spicy tandoori, leftover meat, shellfish. Best cooking: soups, stews, light curries, bone broth, khichdi with chicken, steamed fish. Use spices: ginger, garlic, cumin, coriander, fennel, turmeric, hing, black pepper (moderate). Sample non-veg day: breakfast - vegetable omelette in ghee + whole wheat toast; lunch - chicken curry with rice + cucumber salad; evening - chicken soup + roasted makhana; dinner - fish curry + chapati + steamed vegetables. Extra tips: eat at regular times, never skip meals, avoid cold drinks with meat, include bone broth 2-3 times/week, prefer freshly cooked meat, chew properly, avoid eating meat after 8 PM.",
   },
   pitta: {
     title: "Pitta",
     about:
       "Pitta is hot, sharp, and intense. When balanced it supports focus and strong digestion. When imbalanced it may show as acidity, inflammation, irritability, and overheating.",
     diet:
-      "🌸 Pitta Daily Diet Plan: Favor cooling & refreshing, light, not oily foods with sweet, bitter & astringent tastes. Daily schedule: Early morning - 1 glass room-temperature water or coriander-fennel seed water (soak overnight). Breakfast (8-9 AM) - oats porridge with milk/almond milk, idli with mild coconut chutney, poha with vegetables, or stewed apple/pear. Drink: coconut water/fennel tea/rose tea. Mid-morning - sweet apple/pear/papaya/grapes or soaked almonds (5-6). Lunch - rice/soft chapati + moong/masoor dal + cooked vegetables (bottle gourd, pumpkin, carrot, zucchini, spinach, cucumber) + ½-1 tsp ghee. Evening snack - herbal tea (fennel-rose-licorice) or roasted makhana. Dinner (by 7-7:30 PM) - vegetable soup, steamed veggies + dal, or khichdi. Before bed - warm turmeric milk or cardamom milk. Best foods: rice, oats, wheat, bottle gourd, pumpkin, carrot, zucchini, spinach, cucumber, apple, pear, papaya, grapes, mango, coconut, moong dal, paneer, ghee. Use spices: fennel, coriander, cumin, cardamom, turmeric, mint. Avoid: red chilli, excess black pepper, pickles, vinegar, fried snacks, cheese, excess butter, alcohol, excess tomatoes. Lifestyle: avoid overheating, cooling pranayama, sleep by 10:30 PM, meditation, manage stress. 🍗 Non-Veg for Pitta: Best choices - chicken (boiled, grilled, light curry), turkey, eggs (boiled or soft omelette), freshwater fish (rohu, catla), clear bone broth. Limit - prawns, fatty fish (salmon, tuna), mutton (rare - once in 2-3 weeks). Avoid - beef, deep-fried meat, spicy gravies, processed meats. Daily plan: morning - warm water with lemon + soaked almonds + optional boiled egg; breakfast - vegetable omelette (little oil) OR chicken soup + toast + herbal tea; mid-morning - papaya/apple/pear/pomegranate + coconut water (2-3 times/week); lunch - steamed rice/soft rotis + light chicken/fish curry + vegetables + curd/buttermilk; evening - roasted chana + fennel/coriander tea; dinner - grilled fish/chicken soup + steamed veggies; bedtime - warm milk with nutmeg/cardamom. Best spices: coriander, fennel, cumin, turmeric, cardamom. Avoid excess: red chili, black pepper, garam masala, vinegar. Seasonal tips: summer - prefer fish, eggs, chicken soup, avoid spicy/fried food; winter - add soups & stews but keep spices mild. Health conditions: acidity/gastritis - strictly avoid spicy, sour food; skin problems/acne - reduce oily & fried meat; high BP/cholesterol - choose grilled/boiled only.",
+      "🌸 Pitta Daily Diet Plan: Favor cooling & refreshing, light, not oily foods with sweet, bitter & astringent tastes. Daily schedule: Early morning - 1 glass room-temperature water or coriander-fennel seed water (soak overnight). Breakfast (8-9 AM) - oats porridge with milk/almond milk, idli with mild coconut chutney, poha with vegetables, stewed apple/pear, or quinoa upma. Drink: coconut water/fennel tea/rose tea. Mid-morning - sweet apple/pear/papaya/grapes or soaked almonds (5-6) or figs (2-3). Lunch - rice/soft chapati + moong/masoor dal + cooked vegetables (bottle gourd, pumpkin, carrot, zucchini, spinach, cucumber, broccoli) + ½-1 tsp ghee + cucumber raita. Evening snack - herbal tea (fennel-rose-licorice), roasted makhana, or coconut water with mint. Dinner (by 7-7:30 PM) - vegetable soup, steamed veggies + dal, light khichdi, or millet porridge. Before bed - warm turmeric milk or cardamom milk. Best foods: rice, oats, wheat, quinoa, barley, bottle gourd, pumpkin, carrot, zucchini, spinach, cucumber, broccoli, cabbage, apple, pear, papaya, grapes, mango, pomegranate, coconut, moong dal, masoor dal, paneer, ghee, coconut oil. Use spices: fennel, coriander, cumin, cardamom, turmeric, mint, cilantro. Avoid: red chilli, excess black pepper, pickles, vinegar, fried snacks, cheese, excess butter, alcohol, excess tomatoes, onions, garlic. Lifestyle: avoid overheating, cooling pranayama, sleep by 10:30 PM, meditation, manage stress, avoid anger/frustration. Additional recommendations: Include cooling foods daily, drink plenty of water, avoid skipping meals, eat in peaceful environment, practice mindful eating, include raw salads in moderation, avoid eating when angry/stressed. 🍗 Non-Veg for Pitta: Best choices - chicken (boiled, grilled, light curry), turkey, eggs (boiled or soft omelette), freshwater fish (rohu, catla), clear bone broth, shellfish (occasionally). Limit - prawns, fatty fish (salmon, tuna), mutton (rare - once in 2-3 weeks). Avoid - beef, deep-fried meat, spicy gravies, processed meats, preserved meats. Daily plan: morning - warm water with lemon + soaked almonds + optional boiled egg; breakfast - vegetable omelette (little oil) OR chicken soup + toast + herbal tea; mid-morning - papaya/apple/pear/pomegranate + coconut water (2-3 times/week); lunch - steamed rice/soft rotis + light chicken/fish curry + vegetables + curd/buttermilk; evening - roasted chana + fennel/coriander tea; dinner - grilled fish/chicken soup + steamed vegetables + small portion rice; bedtime - warm turmeric milk. Best cooking methods: steaming, boiling, grilling, baking, light sautéing. Use cooling spices: fennel, coriander, mint, cilantro, cardamom. Avoid excessive heating: no deep frying, minimal spices, no heavy gravies.",
   },
   kapha: {
     title: "Kapha",
     about:
       "Kapha is heavy, steady, and nourishing. When balanced it supports stability and endurance. When imbalanced it may show as heaviness, sluggish digestion, congestion, and weight gain.",
     diet:
-      "🌸 Kapha Daily Diet Plan: Favor warm, light, dry foods with spicy, bitter & astringent tastes. Daily schedule: Early morning - warm water with lemon + honey or ginger-tulsi tea. Breakfast (light or skip) - vegetable poha (very little oil), upma with vegetables, stewed apple with cinnamon, or moong dal chilla. Mid-morning - apple/pear/pomegranate or roasted chana. Lunch - 1 small chapati/brown rice + moong/masoor dal + dry vegetables (cabbage, cauliflower, carrot, beans, spinach, bitter gourd) + ½ tsp ghee. Evening snack - herbal tea (ginger-cinnamon-tulsi) or roasted makhana. Dinner (by 7 PM) - vegetable soup, steamed veggies + dal, or moong dal khichdi. Before bed - warm water or haldi water. Best foods: barley, millet, oats, cabbage, cauliflower, carrots, beans, spinach, apple, pear, berries, pomegranate, moong dal, chickpeas. Use spices: ginger, cinnamon, black pepper, turmeric, clove. Avoid: excess white rice, potatoes, sweets, cold curd, cheese, fried snacks, ice cream. Lifestyle: wake before 6 AM, daily brisk walk/yoga, avoid day sleep, keep meals light. 🍗 Non-Veg for Kapha: Best choices - chicken (grilled, roasted, soup), turkey, eggs (boiled/omelette with little oil), freshwater fish (rohu, catla), clear bone broth. Limit - mutton (1-2 times/month), prawns, fatty fish (salmon, tuna). Avoid - beef, deep-fried meat, creamy gravies, processed meats. Daily non-veg plan: morning - warm water with ginger+lemon + soaked almonds; breakfast - vegetable omelette (minimal oil) OR clear chicken soup + ginger tea; lunch - 1-2 rotis + grilled/roasted chicken/fish + stir-fried vegetables + buttermilk; evening - roasted chana + green tea; dinner - clear chicken soup/grilled fish + steamed veggies (avoid rice at night); bedtime - warm turmeric water. Best spices: ginger, black pepper, turmeric, mustard seeds, cumin, hing. Seasonal tips: winter - use soups/stews but avoid creamy gravies; spring - prefer grilled/roasted food, avoid dairy+meat together. Health conditions: weight gain/thyroid - eat lighter dinners; sinus/cold - avoid curd, cheese, cold drinks; high cholesterol - choose boiled/grilled meats only.",
+      "🌸 Kapha Daily Diet Plan: Favor warm, light, dry foods with spicy, bitter & astringent tastes. Daily schedule: Early morning - warm water with lemon + honey or ginger-tulsi tea. Breakfast (light or skip) - vegetable poha (very little oil), upma with vegetables, stewed apple with cinnamon, moong dal chilla, or oats porridge with berries. Mid-morning - apple/pear/pomegranate or roasted chana or sprouts salad. Lunch - 1 small chapati/brown rice + moong/masoor dal + dry vegetables (cabbage, cauliflower, carrot, beans, spinach, bitter gourd, broccoli) + ½ tsp ghee. Evening snack - herbal tea (ginger-cinnamon-tulsi), roasted makhana, or vegetable juice. Dinner (by 7 PM) - vegetable soup, steamed veggies + dal, moong dal khichdi, or clear soup. Before bed - warm water or haldi water. Best foods: barley, millet, oats, quinoa, buckwheat, cabbage, cauliflower, carrots, beans, spinach, bitter gourd, broccoli, bottle gourd, apple, pear, berries, pomegranate, grapefruit, lemon, moong dal, masoor dal, chickpeas, lentil sprouts. Use spices: ginger, cinnamon, black pepper, turmeric, clove, mustard seeds, hing. Avoid: excess white rice, potatoes, sweets, cold curd, cheese, fried snacks, ice cream, heavy dairy, refined flour, processed foods. Lifestyle: wake before 6 AM, daily brisk walk/yoga, avoid day sleep, keep meals light, practice intermittent fasting (optional). Additional recommendations: Include bitter foods daily, drink warm water with lemon, avoid overeating, practice dry brushing, include detoxifying foods, eat largest meal at lunch, light dinner only, avoid late-night eating, include fiber-rich foods. 🍗 Non-Veg for Kapha: Best choices - chicken (grilled, roasted, soup), turkey, eggs (boiled/omelette with little oil), freshwater fish (rohu, catla), clear bone broth, shellfish (occasionally). Limit - mutton (1-2 times/month), prawns, fatty fish (salmon, tuna), duck. Avoid - beef, pork, deep-fried meat, creamy gravies, processed meats, preserved meats. Daily non-veg plan: morning - warm water with ginger+lemon + soaked almonds; breakfast - vegetable omelette (minimal oil) OR clear chicken soup + ginger tea; lunch - 1-2 rotis + grilled/roasted chicken/fish + stir-fried vegetables + buttermilk; evening - roasted chana + green tea; dinner - clear chicken soup/grilled fish + steamed veggies (avoid rice at night); bedtime - warm turmeric water. Best cooking methods: grilling, roasting, baking, steaming, boiling. Use stimulating spices: ginger, black pepper, turmeric, mustard seeds, hing, cayenne (moderate). Seasonal tips: winter - use soups/stews but avoid creamy gravies; spring - prefer grilled/roasted food, avoid dairy+meat together; summer - include cooling herbs like mint, cilantro; monsoon - avoid heavy meats, prefer clear soups.",
   },
   dual: {
     title: "Dual Dosha",
     about:
       "Your responses are close across two doshas. A dual-dosha approach often works best: follow the overlap that feels most supportive day-to-day.",
-    diet: "Focus on balance, meal regularity, and seasonal adjustments. For Vata-Pitta: Warm, moist, mildly cooling, and not too spicy. Favor warm, cooked, easy-to-digest foods that are slightly cooling but not cold, with mild spices. Avoid very spicy, sour, salty foods and very dry, raw, or cold items.",
+    diet: "🌸 Dual Dosha Daily Diet Plan: Focus on balance, meal regularity, and seasonal adjustments. For Vata-Pitta: Warm, moist, mildly cooling, and not too spicy. Favor warm, cooked, easy-to-digest foods that are slightly cooling but not cold, with mild spices. Avoid very spicy, sour, salty foods and very dry, raw, or cold items. Daily schedule: Early morning - warm water with lemon + soaked almonds. Breakfast (8-9 AM) - vegetable oats porridge, moong dal chilla, idli with mild chutney, or quinoa upma. Mid-morning - sweet fruits or soaked nuts. Lunch - rice/soft chapati + dal + cooked vegetables + small salad. Evening snack - herbal tea or roasted makhana. Dinner - light soup + chapati or khichdi. For Vata-Kapha: Warm, light, stimulating but not overly spicy. Favor warm, lightly spiced, easy-to-digest foods that are neither too heavy nor too dry. Avoid cold, heavy, oily, and overly sweet foods. Daily schedule: Early morning - warm water with ginger + honey. Breakfast - light warm porridge or steamed foods. Lunch - small portion rice + dal + vegetables. Dinner - very light soup or steamed veggies. For Pitta-Kapha: Warm, light, stimulating but cooling. Favor warm, lightly spiced foods that are neither too heavy nor too heating. Include bitter and astringent tastes. Avoid cold, heavy, oily, and overly spicy foods. Daily schedule: Early morning - warm water with lemon. Breakfast - light warm foods with mild spices. Lunch - moderate portion with cooling vegetables. Dinner - very light, early meal. Best foods for all dual doshas: rice, oats, barley, millet, seasonal vegetables, fresh fruits, moong dal, light proteins. Use spices: cumin, coriander, fennel, turmeric, ginger (moderate), black pepper (moderate). Avoid: incompatible food combinations, overeating, irregular meal times, processed foods. Lifestyle: maintain consistent routine, seasonal adjustments, stress management, regular exercise. 🍗 Non-Veg for Dual Doshas: Vata-Pitta: Best - chicken soup, boiled eggs, light fish curry. Avoid - fried meats, spicy gravies. Vata-Kapha: Best - grilled chicken, clear soups, boiled eggs. Avoid - heavy meats, creamy gravies. Pitta-Kapha: Best - grilled fish, chicken soup, boiled eggs. Avoid - red meat, fried foods, heavy gravies. General guidelines: prefer freshly cooked, light preparations, avoid late-night meat consumption, include bone broths, chew thoroughly, eat at regular times.",
   },
   tridosha: {
     title: "Tridosha",
@@ -453,6 +453,16 @@ function formatDietPlan(dietText) {
   formatted = formatted.replace(/Best spices:/gi, '<br><strong>🧂 Best Spices:</strong>');
   formatted = formatted.replace(/Seasonal tips:/gi, '<br><br><strong>❄️ Seasonal Tips:</strong>');
   formatted = formatted.replace(/Health conditions:/gi, '<br><br><strong>⚠️ Health Conditions:</strong>');
+  formatted = formatted.replace(/Additional recommendations:/gi, '<br><br><strong>💡 Additional Recommendations:</strong>');
+  formatted = formatted.replace(/General guidelines:/gi, '<br><br><strong>📋 General Guidelines:</strong>');
+  formatted = formatted.replace(/Best cooking methods:/gi, '<br><strong>🔥 Best Cooking Methods:</strong>');
+  formatted = formatted.replace(/Seasonal adjustments:/gi, '<br><strong>🌤️ Seasonal Adjustments:</strong>');
+  formatted = formatted.replace(/Use balanced spices:/gi, '<br><strong>🧂 Use Balanced Spices:</strong>');
+  formatted = formatted.replace(/Avoid excess:/gi, '<br><strong>⚠️ Avoid Excess:</strong>');
+  formatted = formatted.replace(/For Vata-Pitta:/gi, '<br><br><strong>🌸 Vata-Pitta:</strong>');
+  formatted = formatted.replace(/For Vata-Kapha:/gi, '<br><br><strong>🌸 Vata-Kapha:</strong>');
+  formatted = formatted.replace(/For Pitta-Kapha:/gi, '<br><br><strong>🌸 Pitta-Kapha:</strong>');
+  formatted = formatted.replace(/Remember:/gi, '<br><br><strong>💭 Remember:</strong>');
   
   // Replace "OR" with proper formatting
   formatted = formatted.replace(/ OR /gi, ' <strong>or</strong> ');
@@ -462,6 +472,9 @@ function formatDietPlan(dietText) {
   
   // Format time ranges
   formatted = formatted.replace(/\((\d+:\d+\s*(?:AM|PM)?)\s*–\s*(\d+:\d+\s*(?:AM|PM)?)\)/gi, '($1–$2)');
+  
+  // Format food lists with better spacing
+  formatted = formatted.replace(/, /g, ', ');
   
   return formatted;
 }
@@ -501,89 +514,89 @@ function computePlan() {
   const doshaPlan = {
     vata: {
       veg: {
-        favor: ["Warm cooked meals (khichdi, soups)", "Ghee, sesame oil, nuts", "Sweet fruits (ripe banana, dates)", "Gentle spices (ginger, cumin, ajwain)"],
-        reduce: ["Cold/raw foods", "Excess caffeine", "Dry snacks", "Skipping meals"],
-        routine: ["Eat at consistent times", "Warm water or herbal tea through the day", "Early, calming dinner", "Gentle walking/yoga"],
+        favor: ["Warm cooked meals (khichdi, soups)", "Ghee, sesame oil, nuts", "Sweet fruits (ripe banana, dates)", "Gentle spices (ginger, cumin, ajwain)", "Root vegetables (sweet potato, carrot, beetroot)", "Whole grains (rice, oats, warm ragi)"],
+        reduce: ["Cold/raw foods", "Excess caffeine", "Dry snacks", "Skipping meals", "Bitter gourd, refined flour", "Ice cream, cold drinks"],
+        routine: ["Eat at consistent times (8 AM, 1 PM, 7 PM)", "Warm water or herbal tea through the day", "Early, calming dinner before 8 PM", "Gentle walking/yoga", "Oil massage with warm sesame oil"],
         sample: {
-          breakfast: "Warm porridge with ghee + stewed apple",
-          lunch: "Moong dal khichdi + cooked seasonal vegetables",
-          dinner: "Vegetable soup + soft roti + ghee",
+          breakfast: "Warm porridge with ghee + stewed apple (1 bowl)",
+          lunch: "Moong dal khichdi + cooked seasonal vegetables (1.5 cups)",
+          dinner: "Vegetable soup + soft roti (2) + ghee (1 tsp)",
         },
       },
       nonveg: {
-        favor: ["Warm cooked meals (khichdi, soups)", "Ghee, sesame oil, nuts", "Sweet fruits (ripe banana, dates)", "Gentle spices (ginger, cumin, ajwain)", "Chicken soup, boiled eggs, freshwater fish"],
-        reduce: ["Cold/raw foods", "Excess caffeine", "Dry snacks", "Skipping meals", "Fried meats, processed meats"],
-        routine: ["Eat at consistent times", "Warm water or herbal tea through the day", "Early, calming dinner", "Gentle walking/yoga"],
+        favor: ["Warm cooked meals (khichdi, soups)", "Ghee, sesame oil, nuts", "Sweet fruits (ripe banana, dates)", "Gentle spices (ginger, cumin, ajwain)", "Chicken soup, boiled eggs, freshwater fish", "Bone broth with vegetables"],
+        reduce: ["Cold/raw foods", "Excess caffeine", "Dry snacks", "Skipping meals", "Fried meats, processed meats", "Red meat, shellfish"],
+        routine: ["Eat at consistent times (8 AM, 1 PM, 7 PM)", "Warm water or herbal tea through the day", "Early, calming dinner before 8 PM", "Gentle walking/yoga", "Oil massage with warm sesame oil"],
         sample: {
-          breakfast: "Vegetable omelette with ghee + toast",
-          lunch: "Chicken curry + rice + cooked vegetables",
-          dinner: "Chicken soup + soft roti + steamed vegetables",
+          breakfast: "Vegetable omelette with ghee + toast (2 eggs)",
+          lunch: "Chicken curry + rice + cooked vegetables (1.5 cups)",
+          dinner: "Chicken soup + soft roti (2) + steamed vegetables",
         },
       },
     },
     pitta: {
       veg: {
-        favor: ["Cooling foods (cucumber, melon)", "Bitter greens", "Coconut water / infused water", "Mild spices (fennel, coriander)"],
-        reduce: ["Very spicy foods", "Fried/oily meals", "Alcohol", "Late-night eating"],
-        routine: ["Prefer lunch as the main meal", "Stay hydrated", "Avoid overheating workouts", "Add cooling breathwork"],
+        favor: ["Cooling foods (cucumber, melon)", "Bitter greens", "Coconut water / infused water", "Mild spices (fennel, coriander)", "Sweet fruits (grapes, mango, pear)", "Ghee, coconut oil"],
+        reduce: ["Very spicy foods", "Fried/oily meals", "Alcohol", "Late-night eating", "Red chilli, pickles, vinegar", "Excess tomatoes, onions"],
+        routine: ["Prefer lunch as the main meal", "Stay hydrated (3-4 liters water)", "Avoid overheating workouts", "Add cooling breathwork", "Eat in peaceful environment"],
         sample: {
-          breakfast: "Overnight soaked oats + berries + cardamom",
-          lunch: "Rice + dal + sautéed greens + cucumber raita",
-          dinner: "Light moong dal soup + steamed veggies",
+          breakfast: "Overnight soaked oats + berries + cardamom (1 bowl)",
+          lunch: "Rice + dal + sautéed greens + cucumber raita (1.5 cups)",
+          dinner: "Light moong dal soup + steamed veggies (1 bowl)",
         },
       },
       nonveg: {
-        favor: ["Cooling foods (cucumber, melon)", "Bitter greens", "Coconut water / infused water", "Mild spices (fennel, coriander)", "Boiled chicken, grilled fish, eggs"],
-        reduce: ["Very spicy foods", "Fried/oily meals", "Alcohol", "Late-night eating", "Spicy gravies, red meat"],
-        routine: ["Prefer lunch as the main meal", "Stay hydrated", "Avoid overheating workouts", "Add cooling breathwork"],
+        favor: ["Cooling foods (cucumber, melon)", "Bitter greens", "Coconut water / infused water", "Mild spices (fennel, coriander)", "Boiled chicken, grilled fish, eggs", "Freshwater fish (rohu, catla)"],
+        reduce: ["Very spicy foods", "Fried/oily meals", "Alcohol", "Late-night eating", "Spicy gravies, red meat", "Shellfish, fatty fish"],
+        routine: ["Prefer lunch as the main meal", "Stay hydrated (3-4 liters water)", "Avoid overheating workouts", "Add cooling breathwork", "Eat in peaceful environment"],
         sample: {
-          breakfast: "Boiled egg + oats + berries",
-          lunch: "Grilled fish + rice + cucumber salad",
-          dinner: "Light chicken soup + steamed veggies",
+          breakfast: "Boiled egg + oats + berries (2 eggs, 1 bowl)",
+          lunch: "Grilled fish + rice + cucumber salad (1.5 cups)",
+          dinner: "Light chicken soup + steamed veggies (1 bowl)",
         },
       },
     },
     kapha: {
       veg: {
-        favor: ["Light warm meals", "Legumes and vegetables", "Spices (black pepper, ginger)", "Herbal teas (ginger, tulsi)"],
-        reduce: ["Sugar and sweets", "Heavy dairy", "Fried foods", "Daytime naps"],
-        routine: ["Morning movement daily", "Early, light dinner", "Eat only when hungry", "Keep meals simple"],
+        favor: ["Light warm meals", "Legumes and vegetables", "Spices (black pepper, ginger)", "Herbal teas (ginger, tulsi)", "Bitter vegetables (bitter gourd, spinach)", "Millet, barley, light grains"],
+        reduce: ["Sugar and sweets", "Heavy dairy", "Fried foods", "Daytime naps", "White rice, potatoes", "Cold curd, cheese"],
+        routine: ["Morning movement daily (30-45 min walk)", "Early, light dinner before 7 PM", "Eat only when hungry", "Keep meals simple", "Dry brushing, warm water with lemon"],
         sample: {
-          breakfast: "Spiced upma/poha with vegetables",
-          lunch: "Millet roti + dal + mixed veg sabzi",
-          dinner: "Clear vegetable soup + sautéed greens",
+          breakfast: "Spiced upma/poha with vegetables (1.5 cups)",
+          lunch: "Millet roti + dal + mixed veg sabzi (2 rotis, 1.5 cups)",
+          dinner: "Clear vegetable soup + sautéed greens (1 bowl)",
         },
       },
       nonveg: {
-        favor: ["Light warm meals", "Legumes and vegetables", "Spices (black pepper, ginger)", "Herbal teas (ginger, tulsi)", "Grilled chicken, boiled eggs, clear fish soup"],
-        reduce: ["Sugar and sweets", "Heavy dairy", "Fried foods", "Daytime naps", "Fatty meats, creamy gravies"],
-        routine: ["Morning movement daily", "Early, light dinner", "Eat only when hungry", "Keep meals simple"],
+        favor: ["Light warm meals", "Legumes and vegetables", "Spices (black pepper, ginger)", "Herbal teas (ginger, tulsi)", "Grilled chicken, boiled eggs, clear fish soup", "Lean protein, small portions"],
+        reduce: ["Sugar and sweets", "Heavy dairy", "Fried foods", "Daytime naps", "Fatty meats, creamy gravies", "Processed meats, excess non-veg"],
+        routine: ["Morning movement daily (30-45 min walk)", "Early, light dinner before 7 PM", "Eat only when hungry", "Keep meals simple", "Dry brushing, warm water with lemon"],
         sample: {
-          breakfast: "Vegetable omelette (minimal oil) + green tea",
-          lunch: "Grilled chicken + millet roti + vegetables",
-          dinner: "Clear chicken soup + steamed vegetables",
+          breakfast: "Vegetable omelette (minimal oil) + green tea (2 eggs)",
+          lunch: "Grilled chicken + millet roti + vegetables (100g chicken)",
+          dinner: "Clear chicken soup + steamed vegetables (1 bowl)",
         },
       },
     },
     dual: {
       veg: {
-        favor: ["Cooked seasonal meals", "Balanced spice use", "Plenty of vegetables", "Regular meal timing"],
-        reduce: ["Overeating", "Processed foods", "Late-night meals"],
-        routine: ["Maintain consistent routine", "Hydration and sleep regularity", "Walk after meals"],
+        favor: ["Cooked seasonal meals", "Balanced spice use", "Plenty of vegetables", "Regular meal timing", "Both light and nourishing foods", "Adapt to seasonal needs"],
+        reduce: ["Overeating", "Processed foods", "Late-night meals", "Incompatible combinations", "Excess of any one taste"],
+        routine: ["Maintain consistent routine", "Hydration and sleep regularity", "Walk after meals", "Seasonal adjustments", "Listen to body signals"],
         sample: {
-          breakfast: "Warm porridge + fruit",
-          lunch: "Rice + dal + vegetables",
-          dinner: "Soup + light meal",
+          breakfast: "Warm porridge + fruit (1 bowl)",
+          lunch: "Rice + dal + vegetables (1.5 cups)",
+          dinner: "Soup + light meal (1 bowl)",
         },
       },
       nonveg: {
-        favor: ["Cooked seasonal meals", "Balanced spice use", "Plenty of vegetables", "Regular meal timing", "Light chicken/fish, eggs"],
-        reduce: ["Overeating", "Processed foods", "Late-night meals", "Fried meats, heavy gravies"],
-        routine: ["Maintain consistent routine", "Hydration and sleep regularity", "Walk after meals"],
+        favor: ["Cooked seasonal meals", "Balanced spice use", "Plenty of vegetables", "Regular meal timing", "Light chicken/fish, eggs", "Adapt to seasonal needs"],
+        reduce: ["Overeating", "Processed foods", "Late-night meals", "Fried meats, heavy gravies", "Incompatible combinations"],
+        routine: ["Maintain consistent routine", "Hydration and sleep regularity", "Walk after meals", "Seasonal adjustments", "Listen to body signals"],
         sample: {
-          breakfast: "Vegetable omelette + toast",
-          lunch: "Light chicken/fish curry + rice + vegetables",
-          dinner: "Clear soup + grilled fish/chicken",
+          breakfast: "Vegetable omelette + toast (2 eggs)",
+          lunch: "Light chicken/fish curry + rice + vegetables (1.5 cups)",
+          dinner: "Clear soup + grilled fish/chicken (1 bowl)",
         },
       },
     },
@@ -605,16 +618,47 @@ function computePlan() {
 
   if (bmiCat === "Underweight") {
     base.favor.unshift("Add healthy calories: ghee, nuts, dates (as tolerated)");
+    base.favor.push("Nut-dense smoothies with banana and dates", "Protein-rich dal and legume preparations", "Healthy fats: avocado, coconut, sesame seeds");
     base.routine.push("Aim for 3 meals + 1 nourishing snack if needed");
+    base.routine.push("Include strength training 3x/week", "Sleep 8-9 hours for recovery", "Avoid excessive cardio");
   }
 
   if (bmiCat === "Overweight" || bmiCat === "Obese") {
     base.reduce.unshift("Reduce sugary drinks and ultra-processed snacks");
+    base.reduce.push("White rice, refined flour products", "Deep-fried foods and fast food", "Excess salt and processed meats");
     base.routine.push("Add 30–45 minutes of daily walking");
+    base.routine.push("Practice portion control (use smaller plates)", "Include 5 servings of vegetables daily", "Intermittent fasting (14:10) if suitable");
   }
 
   if (bmiCat === "Normal") {
     base.routine.push("Maintain portions and prioritize digestion");
+    base.routine.push("Include variety in food choices", "Seasonal detox practices", "Maintain current activity level");
+    base.favor.push("Colorful vegetables and fruits", "Balanced macronutrients in each meal");
+  }
+
+  // Add seasonal adjustments
+  const currentMonth = new Date().getMonth();
+  let season = "";
+  
+  if (currentMonth >= 2 && currentMonth <= 4) { // Spring (Mar-May)
+    season = "spring";
+    base.routine.push("Spring focus: Include bitter greens and light foods");
+    base.favor.push("Spring vegetables: spinach, fenugreek, cabbage");
+  } else if (currentMonth >= 5 && currentMonth <= 7) { // Summer (Jun-Aug)
+    season = "summer";
+    base.routine.push("Summer focus: Stay hydrated, eat cooling foods");
+    base.favor.push("Summer fruits: mango, watermelon, cucumber");
+    base.reduce.push("Excess heating spices and fried foods");
+  } else if (currentMonth >= 8 && currentMonth <= 10) { // Monsoon/Autumn (Sep-Nov)
+    season = "monsoon";
+    base.routine.push("Monsoon focus: Boost immunity with warm, spiced foods");
+    base.favor.push("Immunity boosters: ginger, turmeric, garlic");
+    base.reduce.push("Street food and raw foods");
+  } else { // Winter (Dec-Feb)
+    season = "winter";
+    base.routine.push("Winter focus: Nourishing, warming foods");
+    base.favor.push("Winter foods: sesame, jaggery, root vegetables");
+    base.reduce.push("Cold drinks and excessive raw foods");
   }
 
   return base;
@@ -635,6 +679,7 @@ function renderPlan() {
     el("planBreakfast").textContent = "—";
     el("planLunch").textContent = "—";
     el("planDinner").textContent = "—";
+    el("planSeasonal").textContent = "Complete BMI and Dosha to see seasonal recommendations.";
     return;
   }
 
@@ -648,6 +693,22 @@ function renderPlan() {
   el("planBreakfast").textContent = plan.sample.breakfast;
   el("planLunch").textContent = plan.sample.lunch;
   el("planDinner").textContent = plan.sample.dinner;
+
+  // Display seasonal recommendations
+  const currentMonth = new Date().getMonth();
+  let seasonText = "";
+  
+  if (currentMonth >= 2 && currentMonth <= 4) { // Spring
+    seasonText = "🌸 Spring: Focus on light, detoxifying foods. Include bitter greens, sprouts, and lighter meals to cleanse the body.";
+  } else if (currentMonth >= 5 && currentMonth <= 7) { // Summer
+    seasonText = "☀️ Summer: Stay cool and hydrated. Favor sweet, juicy fruits, cooling vegetables, and lighter cooking methods.";
+  } else if (currentMonth >= 8 && currentMonth <= 10) { // Monsoon
+    seasonText = "🌧️ Monsoon: Boost immunity with warm, spiced foods. Include ginger, turmeric, and well-cooked meals.";
+  } else { // Winter
+    seasonText = "❄️ Winter: Nourish and warm the body. Focus on hearty soups, root vegetables, healthy fats, and warming spices.";
+  }
+  
+  el("planSeasonal").textContent = seasonText;
 }
 
 function renderQuiz() {
