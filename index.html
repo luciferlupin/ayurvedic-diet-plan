@@ -552,8 +552,15 @@
             <form id="bmiForm" class="rounded-3xl border border-earth-clay/25 bg-white/60 p-6 shadow-soft hover-lift transition-all duration-300">
               <div class="grid gap-4 sm:grid-cols-2">
                 <div>
-                  <label class="text-sm font-semibold" for="heightCm">Height (cm)</label>
-                  <input class="mt-2 w-full rounded-xl border border-earth-clay/35 bg-white/80 px-4 py-3 outline-none focus:ring-2 focus:ring-earth-moss transition-all duration-300 transform focus:-translate-y-0.5" id="heightCm" name="heightCm" inputmode="decimal" placeholder="e.g. 170" required />
+                  <label class="text-sm font-semibold" for="heightValue">Height</label>
+                  <div class="mt-2 flex gap-2">
+                    <select id="heightUnit" class="rounded-xl border border-earth-clay/35 bg-white/80 px-3 py-3 outline-none focus:ring-2 focus:ring-earth-moss transition-all duration-300">
+                      <option value="cm">cm</option>
+                      <option value="inches">inches</option>
+                      <option value="feet">feet</option>
+                    </select>
+                    <input class="flex-1 rounded-xl border border-earth-clay/35 bg-white/80 px-4 py-3 outline-none focus:ring-2 focus:ring-earth-moss transition-all duration-300 transform focus:-translate-y-0.5" id="heightValue" name="heightValue" inputmode="decimal" placeholder="e.g. 170" required />
+                  </div>
                 </div>
                 <div>
                   <label class="text-sm font-semibold" for="weightKg">Weight (kg)</label>
@@ -653,7 +660,16 @@
               <h2 class="font-serif text-3xl font-black">Your Personalized Diet Plan</h2>
               <p class="mt-2 text-earth-soil/90">Generated using your BMI + Dosha results.</p>
             </div>
-            <button id="planRefresh" class="rounded-xl border border-earth-clay/40 bg-white/60 px-4 py-2 text-sm font-semibold hover:bg-earth-sand">Refresh Plan</button>
+            <div class="flex items-center gap-3">
+              <div class="flex items-center gap-2 rounded-xl border border-earth-clay/35 bg-white/60 px-3 py-2">
+                <label class="text-sm font-semibold text-earth-soil">Diet Type:</label>
+                <select id="dietType" class="rounded-lg border border-earth-clay/25 bg-white/80 px-2 py-1 text-sm outline-none focus:ring-2 focus:ring-earth-moss">
+                  <option value="veg">Vegetarian</option>
+                  <option value="nonveg">Non-Vegetarian</option>
+                </select>
+              </div>
+              <button id="planRefresh" class="rounded-xl border border-earth-clay/40 bg-white/60 px-4 py-2 text-sm font-semibold hover:bg-earth-sand">Refresh Plan</button>
+            </div>
           </div>
 
           <div class="mt-6 grid gap-6 lg:grid-cols-3">

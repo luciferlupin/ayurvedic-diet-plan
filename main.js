@@ -332,6 +332,21 @@ function renderBmi() {
   el("bmiCategory").textContent = state.bmi ? state.bmi.category : "—";
   el("bmiAyurveda").textContent = state.bmi ? state.bmi.note : "Calculate BMI to see guidance.";
   el("contactBmi").textContent = state.bmi ? `${state.bmi.value} (${state.bmi.category})` : "—";
+  
+  // Update height display to show both value and unit
+  if (state.bmi) {
+    const heightDisplay = state.bmi.heightUnit === "cm" 
+      ? `${state.bmi.heightCm} cm` 
+      : state.bmi.heightUnit === "inches"
+      ? `${(state.bmi.heightCm / 2.54).toFixed(1)} inches`
+      : `${(state.bmi.heightCm / 30.48).toFixed(2)} feet`;
+    
+    // You could add a display element for this if needed
+    const heightLabel = document.querySelector('label[for="heightValue"]');
+    if (heightLabel) {
+      heightLabel.textContent = `Height (${state.bmi.heightUnit})`;
+    }
+  }
 }
 
 function computeDominantDosha(scores) {
@@ -383,18 +398,20 @@ function renderDosha() {
   
   if (state.dosha) {
     // Animate the dosha type appearance
-    doshaTypeEl.style.opacity = '0';
-    doshaTypeEl.style.transform = 'scale(0.8)';
+    doshaTypeEl.style.opacity = "0";
+    doshaTypeEl.style.transform = "scale(0.8)";
     
     setTimeout(() => {
       doshaTypeEl.textContent = state.dosha.title;
-      doshaTypeEl.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-      doshaTypeEl.style.opacity = '1';
-      doshaTypeEl.style.transform = 'scale(1)';
+      doshaTypeEl.style.opacity = "1";
+      doshaTypeEl.style.transform = "scale(1)";
     }, 100);
     
     doshaAboutEl.textContent = state.dosha.about;
-    doshaDietEl.textContent = state.dosha.diet;
+    
+    // Format diet plan with proper line breaks and structure
+    const formattedDiet = formatDietPlan(state.dosha.diet);
+    doshaDietEl.innerHTML = formattedDiet;
   } else {
     doshaTypeEl.textContent = "—";
     doshaAboutEl.textContent = "Take the quiz to see your description.";
@@ -402,6 +419,51 @@ function renderDosha() {
   }
   
   el("contactDosha").textContent = state.dosha ? state.dosha.title : "—";
+}
+
+function formatDietPlan(dietText) {
+  // Split by common separators and format with proper line breaks
+  let formatted = dietText;
+  
+  // Replace common separators with HTML line breaks
+  formatted = formatted.replace(/Daily schedule:/gi, '<br><br><strong>🕘 Daily Schedule:</strong>');
+  formatted = formatted.replace(/Early morning -/gi, '<br><strong>🌅 Early Morning:</strong> ');
+  formatted = formatted.replace(/Breakfast \(/gi, '<br><strong>🍳 Breakfast:</strong> (');
+  formatted = formatted.replace(/Mid-morning -/gi, '<br><strong>🍎 Mid-Morning:</strong> ');
+  formatted = formatted.replace(/Lunch -/gi, '<br><strong>🍛 Lunch:</strong> ');
+  formatted = formatted.replace(/Evening snack -/gi, '<br><strong>☕ Evening Snack:</strong> ');
+  formatted = formatted.replace(/Dinner \(/gi, '<br><strong>🍽️ Dinner:</strong> (');
+  formatted = formatted.replace(/Before bed -/gi, '<br><strong>🌙 Before Bed:</strong> ');
+  formatted = formatted.replace(/Best foods:/gi, '<br><br><strong>✅ Best Foods:</strong>');
+  formatted = formatted.replace(/Use spices:/gi, '<br><strong>🧂 Best Spices:</strong>');
+  formatted = formatted.replace(/Avoid:/gi, '<br><strong>❌ Avoid:</strong>');
+  formatted = formatted.replace(/Lifestyle:/gi, '<br><br><strong>🧘 Lifestyle:</strong>');
+  formatted = formatted.replace(/🍗 Non-Veg for/gi, '<br><br><strong>🍗 Non-Vegetarian Options:</strong>');
+  formatted = formatted.replace(/Best choices -/gi, '<br><strong>✅ Best Choices:</strong> ');
+  formatted = formatted.replace(/Limit -/gi, '<br><strong>⚠️ Limit:</strong> ');
+  formatted = formatted.replace(/Avoid -/gi, '<br><strong>❌ Avoid:</strong> ');
+  formatted = formatted.replace(/Daily plan:/gi, '<br><strong>📅 Daily Plan:</strong>');
+  formatted = formatted.replace(/morning -/gi, '<br><strong>🌅 Morning:</strong> ');
+  formatted = formatted.replace(/breakfast -/gi, '<br><strong>🍳 Breakfast:</strong> ');
+  formatted = formatted.replace(/mid-morning -/gi, '<br><strong>🍎 Mid-Morning:</strong> ');
+  formatted = formatted.replace(/lunch -/gi, '<br><strong>🍛 Lunch:</strong> ');
+  formatted = formatted.replace(/evening -/gi, '<br><strong>☕ Evening:</strong> ');
+  formatted = formatted.replace(/dinner -/gi, '<br><strong>🍽️ Dinner:</strong> ');
+  formatted = formatted.replace(/bedtime -/gi, '<br><strong>🌙 Bedtime:</strong> ');
+  formatted = formatted.replace(/Best spices:/gi, '<br><strong>🧂 Best Spices:</strong>');
+  formatted = formatted.replace(/Seasonal tips:/gi, '<br><br><strong>❄️ Seasonal Tips:</strong>');
+  formatted = formatted.replace(/Health conditions:/gi, '<br><br><strong>⚠️ Health Conditions:</strong>');
+  
+  // Replace "OR" with proper formatting
+  formatted = formatted.replace(/ OR /gi, ' <strong>or</strong> ');
+  
+  // Add proper spacing around bullet points
+  formatted = formatted.replace(/•/g, '<br>•');
+  
+  // Format time ranges
+  formatted = formatted.replace(/\((\d+:\d+\s*(?:AM|PM)?)\s*–\s*(\d+:\d+\s*(?:AM|PM)?)\)/gi, '($1–$2)');
+  
+  return formatted;
 }
 
 function li(text) {
@@ -423,6 +485,7 @@ function computePlan() {
   const bmiCat = state.bmi.category;
   const doshaKind = state.dosha.kind;
   const primary = state.dosha.primary;
+  const dietType = el("dietType").value || "veg";
 
   const base = {
     favor: [],
@@ -437,48 +500,104 @@ function computePlan() {
 
   const doshaPlan = {
     vata: {
-      favor: ["Warm cooked meals (khichdi, soups)", "Ghee, sesame oil, nuts", "Sweet fruits (ripe banana, dates)", "Gentle spices (ginger, cumin, ajwain)"],
-      reduce: ["Cold/raw foods", "Excess caffeine", "Dry snacks", "Skipping meals"],
-      routine: ["Eat at consistent times", "Warm water or herbal tea through the day", "Early, calming dinner", "Gentle walking/yoga"],
-      sample: {
-        breakfast: "Warm porridge with ghee + stewed apple",
-        lunch: "Moong dal khichdi + cooked seasonal vegetables",
-        dinner: "Vegetable soup + soft roti + ghee",
+      veg: {
+        favor: ["Warm cooked meals (khichdi, soups)", "Ghee, sesame oil, nuts", "Sweet fruits (ripe banana, dates)", "Gentle spices (ginger, cumin, ajwain)"],
+        reduce: ["Cold/raw foods", "Excess caffeine", "Dry snacks", "Skipping meals"],
+        routine: ["Eat at consistent times", "Warm water or herbal tea through the day", "Early, calming dinner", "Gentle walking/yoga"],
+        sample: {
+          breakfast: "Warm porridge with ghee + stewed apple",
+          lunch: "Moong dal khichdi + cooked seasonal vegetables",
+          dinner: "Vegetable soup + soft roti + ghee",
+        },
+      },
+      nonveg: {
+        favor: ["Warm cooked meals (khichdi, soups)", "Ghee, sesame oil, nuts", "Sweet fruits (ripe banana, dates)", "Gentle spices (ginger, cumin, ajwain)", "Chicken soup, boiled eggs, freshwater fish"],
+        reduce: ["Cold/raw foods", "Excess caffeine", "Dry snacks", "Skipping meals", "Fried meats, processed meats"],
+        routine: ["Eat at consistent times", "Warm water or herbal tea through the day", "Early, calming dinner", "Gentle walking/yoga"],
+        sample: {
+          breakfast: "Vegetable omelette with ghee + toast",
+          lunch: "Chicken curry + rice + cooked vegetables",
+          dinner: "Chicken soup + soft roti + steamed vegetables",
+        },
       },
     },
     pitta: {
-      favor: ["Cooling foods (cucumber, melon)", "Bitter greens", "Coconut water / infused water", "Mild spices (fennel, coriander)"],
-      reduce: ["Very spicy foods", "Fried/oily meals", "Alcohol", "Late-night eating"],
-      routine: ["Prefer lunch as the main meal", "Stay hydrated", "Avoid overheating workouts", "Add cooling breathwork"],
-      sample: {
-        breakfast: "Overnight soaked oats + berries + cardamom",
-        lunch: "Rice + dal + sautéed greens + cucumber raita",
-        dinner: "Light moong dal soup + steamed veggies",
+      veg: {
+        favor: ["Cooling foods (cucumber, melon)", "Bitter greens", "Coconut water / infused water", "Mild spices (fennel, coriander)"],
+        reduce: ["Very spicy foods", "Fried/oily meals", "Alcohol", "Late-night eating"],
+        routine: ["Prefer lunch as the main meal", "Stay hydrated", "Avoid overheating workouts", "Add cooling breathwork"],
+        sample: {
+          breakfast: "Overnight soaked oats + berries + cardamom",
+          lunch: "Rice + dal + sautéed greens + cucumber raita",
+          dinner: "Light moong dal soup + steamed veggies",
+        },
+      },
+      nonveg: {
+        favor: ["Cooling foods (cucumber, melon)", "Bitter greens", "Coconut water / infused water", "Mild spices (fennel, coriander)", "Boiled chicken, grilled fish, eggs"],
+        reduce: ["Very spicy foods", "Fried/oily meals", "Alcohol", "Late-night eating", "Spicy gravies, red meat"],
+        routine: ["Prefer lunch as the main meal", "Stay hydrated", "Avoid overheating workouts", "Add cooling breathwork"],
+        sample: {
+          breakfast: "Boiled egg + oats + berries",
+          lunch: "Grilled fish + rice + cucumber salad",
+          dinner: "Light chicken soup + steamed veggies",
+        },
       },
     },
     kapha: {
-      favor: ["Light warm meals", "Legumes and vegetables", "Spices (black pepper, ginger)", "Herbal teas (ginger, tulsi)"],
-      reduce: ["Sugar and sweets", "Heavy dairy", "Fried foods", "Daytime naps"],
-      routine: ["Morning movement daily", "Early, light dinner", "Eat only when hungry", "Keep meals simple"],
-      sample: {
-        breakfast: "Spiced upma/poha with vegetables",
-        lunch: "Millet roti + dal + mixed veg sabzi",
-        dinner: "Clear vegetable soup + sautéed greens",
+      veg: {
+        favor: ["Light warm meals", "Legumes and vegetables", "Spices (black pepper, ginger)", "Herbal teas (ginger, tulsi)"],
+        reduce: ["Sugar and sweets", "Heavy dairy", "Fried foods", "Daytime naps"],
+        routine: ["Morning movement daily", "Early, light dinner", "Eat only when hungry", "Keep meals simple"],
+        sample: {
+          breakfast: "Spiced upma/poha with vegetables",
+          lunch: "Millet roti + dal + mixed veg sabzi",
+          dinner: "Clear vegetable soup + sautéed greens",
+        },
+      },
+      nonveg: {
+        favor: ["Light warm meals", "Legumes and vegetables", "Spices (black pepper, ginger)", "Herbal teas (ginger, tulsi)", "Grilled chicken, boiled eggs, clear fish soup"],
+        reduce: ["Sugar and sweets", "Heavy dairy", "Fried foods", "Daytime naps", "Fatty meats, creamy gravies"],
+        routine: ["Morning movement daily", "Early, light dinner", "Eat only when hungry", "Keep meals simple"],
+        sample: {
+          breakfast: "Vegetable omelette (minimal oil) + green tea",
+          lunch: "Grilled chicken + millet roti + vegetables",
+          dinner: "Clear chicken soup + steamed vegetables",
+        },
       },
     },
     dual: {
-      favor: ["Cooked seasonal meals", "Balanced spice use", "Plenty of vegetables", "Regular meal timing"],
-      reduce: ["Overeating", "Processed foods", "Late-night meals"],
-      routine: ["Maintain consistent routine", "Hydration and sleep regularity", "Walk after meals"],
-      sample: {
-        breakfast: "Warm porridge + fruit",
-        lunch: "Rice + dal + vegetables",
-        dinner: "Soup + light meal",
+      veg: {
+        favor: ["Cooked seasonal meals", "Balanced spice use", "Plenty of vegetables", "Regular meal timing"],
+        reduce: ["Overeating", "Processed foods", "Late-night meals"],
+        routine: ["Maintain consistent routine", "Hydration and sleep regularity", "Walk after meals"],
+        sample: {
+          breakfast: "Warm porridge + fruit",
+          lunch: "Rice + dal + vegetables",
+          dinner: "Soup + light meal",
+        },
+      },
+      nonveg: {
+        favor: ["Cooked seasonal meals", "Balanced spice use", "Plenty of vegetables", "Regular meal timing", "Light chicken/fish, eggs"],
+        reduce: ["Overeating", "Processed foods", "Late-night meals", "Fried meats, heavy gravies"],
+        routine: ["Maintain consistent routine", "Hydration and sleep regularity", "Walk after meals"],
+        sample: {
+          breakfast: "Vegetable omelette + toast",
+          lunch: "Light chicken/fish curry + rice + vegetables",
+          dinner: "Clear soup + grilled fish/chicken",
+        },
       },
     },
   };
 
-  const chosen = doshaKind === "dual" ? doshaPlan.dual : doshaPlan[primary];
+  let chosen;
+  if (doshaKind === "dual") {
+    chosen = doshaPlan.dual[dietType];
+  } else if (doshaKind === "tridosha") {
+    chosen = doshaPlan.dual[dietType]; // Use dual plan for tridosha as well
+  } else {
+    chosen = doshaPlan[primary][dietType];
+  }
+
   base.favor.push(...chosen.favor);
   base.reduce.push(...chosen.reduce);
   base.routine.push(...chosen.routine);
@@ -1013,6 +1132,24 @@ function init() {
     mobileBtn.setAttribute("aria-expanded", String(!isOpen));
   });
 
+  // Initialize height placeholder
+  const heightUnit = el("heightUnit");
+  const heightValue = el("heightValue");
+  if (heightUnit && heightValue) {
+    const unit = heightUnit.value;
+    switch(unit) {
+      case "cm":
+        heightValue.placeholder = "e.g. 170";
+        break;
+      case "inches":
+        heightValue.placeholder = "e.g. 67";
+        break;
+      case "feet":
+        heightValue.placeholder = "e.g. 5.6";
+        break;
+    }
+  }
+
   // Initialize gamification progress bars
   updateGamificationProgress();
 
@@ -1031,22 +1168,28 @@ function init() {
 
   el("bmiForm").addEventListener("submit", (e) => {
     e.preventDefault();
-    const heightCm = parseNum(el("heightCm").value);
+    const heightUnit = el("heightUnit").value;
+    const heightValue = parseNum(el("heightValue").value);
     const weightKg = parseNum(el("weightKg").value);
 
-    if (!heightCm || !weightKg || heightCm <= 0 || weightKg <= 0) return;
+    if (!heightValue || !weightKg || heightValue <= 0 || weightKg <= 0) return;
+
+    // Convert height to cm based on unit
+    let heightCm;
+    if (heightUnit === "cm") {
+      heightCm = heightValue;
+    } else if (heightUnit === "inches") {
+      heightCm = heightValue * 2.54; // 1 inch = 2.54 cm
+    } else if (heightUnit === "feet") {
+      heightCm = heightValue * 30.48; // 1 foot = 12 inches = 30.48 cm
+    }
 
     const heightM = heightCm / 100;
     const bmi = weightKg / (heightM * heightM);
     const value = round1(bmi);
     const category = bmiCategory(value);
 
-    state.bmi = {
-      value,
-      category,
-      note: bmiAyurvedicNote(category),
-    };
-
+    state.bmi = { value, category, heightCm, weightKg, heightUnit };
     saveState();
     setHero();
     renderBmi();
@@ -1055,10 +1198,12 @@ function init() {
 
   el("bmiReset").addEventListener("click", () => {
     clearState("bmi");
-    el("heightCm").value = "";
+    el("heightValue").value = "";
+    el("heightUnit").value = "cm";
     el("weightKg").value = "";
     setHero();
     renderBmi();
+    renderDosha();
     renderPlan();
   });
 
@@ -1106,6 +1251,28 @@ function init() {
     renderBmi();
     renderDosha();
     renderPlan();
+  });
+
+  el("dietType").addEventListener("change", () => {
+    renderPlan();
+  });
+
+  // Update placeholder based on height unit selection
+  el("heightUnit").addEventListener("change", () => {
+    const heightValue = el("heightValue");
+    const unit = el("heightUnit").value;
+    
+    switch(unit) {
+      case "cm":
+        heightValue.placeholder = "e.g. 170";
+        break;
+      case "inches":
+        heightValue.placeholder = "e.g. 67";
+        break;
+      case "feet":
+        heightValue.placeholder = "e.g. 5.6";
+        break;
+    }
   });
 
   el("contactForm").addEventListener("submit", (e) => {
