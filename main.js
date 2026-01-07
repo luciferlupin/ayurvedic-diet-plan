@@ -239,7 +239,7 @@ const doshaProfiles = {
     title: "Dual Dosha",
     about:
       "Your responses are close across two doshas. A dual-dosha approach often works best: follow the overlap that feels most supportive day-to-day.",
-    diet: "Focus on balance, meal regularity, and seasonal adjustments.",
+    diet: "Focus on balance, meal regularity, and seasonal adjustments. For Vata-Pitta: Warm, moist, mildly cooling, and not too spicy. Favor warm, cooked, easy-to-digest foods that are slightly cooling but not cold, with mild spices. Avoid very spicy, sour, salty foods and very dry, raw, or cold items.",
   },
   tridosha: {
     title: "Tridosha",
@@ -602,11 +602,23 @@ function setDoshaFromScores(scores) {
       scores: dom.scores,
     };
   } else if (dom.kind === "dual") {
+    // Get specific guidance for the dual dosha combination
+    const dualKey = `${dom.primary}-${dom.secondary}`;
+    let specificDiet = doshaProfiles.dual.diet;
+    
+    if (dualKey === "vata-pitta" || dualKey === "pitta-vata") {
+      specificDiet = "Vata-Pitta: Warm, moist, mildly cooling foods. Favor rice, oats, quinoa, cooked vegetables (bottle gourd, pumpkin, sweet potato, carrots), and sweet cooling fruits (mango, papaya, pears, grapes). Use mild spices only. Avoid very spicy, sour, salty foods and very dry, raw, or cold items.";
+    } else if (dualKey === "vata-kapha" || dualKey === "kapha-vata") {
+      specificDiet = "Vata-Kapha: Warm, light, and stimulating foods. Favor warm soups, steamed vegetables, and spices like ginger, cinnamon, and turmeric. Include light grains like quinoa and barley. Reduce heavy, oily foods and dairy. Favor warm fruits and avoid cold drinks.";
+    } else if (dualKey === "pitta-kapha" || dualKey === "kapha-pitta") {
+      specificDiet = "Pitta-Kapha: Light, warm, and slightly dry foods. Favor bitter, astringent, and sweet tastes. Include plenty of vegetables, legumes, and light grains. Use cooling spices like coriander and fennel. Reduce heavy, oily, spicy foods and limit sweets and dairy.";
+    }
+    
     state.dosha = {
       kind: "dual",
       title: `${dom.primary.toUpperCase()} + ${dom.secondary.toUpperCase()}`,
       about: doshaProfiles.dual.about,
-      diet: doshaProfiles.dual.diet,
+      diet: specificDiet,
       primary: dom.primary,
       secondary: dom.secondary,
       scores: dom.scores,
@@ -738,7 +750,7 @@ const testimonials = [
     rating: 5,
     text: "After struggling with PCOS for years, Dr. Shreya's personalized diet plan helped me regulate my cycles and lose 8kg in 3 months. The best part was how sustainable the changes were - I never felt deprived.",
     result: "Regular cycles, 8kg weight loss, improved energy",
-    avatar: "https://images.unsplash.com/photo-1494790108755-2616b332c1ca?w=100&h=100&fit=crop&crop=face&auto=format",
+    avatar: "https://images.unsplash.com/photo-1494790108755-2616b332c1ca?w=100&h=100&fit=crop&crop=face&auto=format&dpr=2",
   },
   {
     name: "Rahul Verma",
@@ -747,7 +759,7 @@ const testimonials = [
     rating: 5,
     text: "My acidity issues and work stress were affecting my daily life. The Ayurvedic approach not only fixed my digestion but also helped me manage stress better. I feel more balanced and focused.",
     result: "No acidity, better stress management, improved sleep",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face&auto=format",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face&auto=format&dpr=2",
   },
   {
     name: "Anjali Patel",
@@ -756,7 +768,7 @@ const testimonials = [
     rating: 5,
     text: "Despite medication, I always felt tired. Dr. Shreya's dietary recommendations complemented my treatment and gave me my energy back. I can now keep up with my kids and work.",
     result: "Increased energy levels, better thyroid function, active lifestyle",
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face&auto=format",
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face&auto=format&dpr=2",
   },
   {
     name: "Karan Malhotra",
@@ -765,7 +777,7 @@ const testimonials = [
     rating: 5,
     text: "I had tried everything for my bloating and digestive issues. The simple dietary changes and timing suggestions made a huge difference. I feel lighter and more comfortable after meals.",
     result: "No bloating, regular digestion, improved gut health",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face&auto=format",
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face&auto=format&dpr=2",
   },
 ];
 

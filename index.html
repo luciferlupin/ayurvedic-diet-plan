@@ -259,61 +259,68 @@
     </header>
 
     <main>
-      <!-- AYURDIET Brand Section -->
-      <section class="section-anchor" id="top">
-        <div class="mx-auto max-w-6xl px-4 sm:px-6 py-16 sm:py-20">
-          <div class="text-center">
-            <!-- AYURDIET Logo -->
-            <div class="inline-flex items-center justify-center mb-8 fade-in-up scale-in">
-              <div class="h-32 w-32 rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-earth-moss to-earth-leaf flex items-center justify-center float-animation">
-                <img src="./WhatsApp Image 2026-01-06 at 12.30.50.jpeg" alt="AYURDIET Logo" class="h-full w-full object-cover" />
-              </div>
-            </div>
-            
-            <!-- Brand Name -->
-            <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl font-black mb-6 tracking-tight fade-in-up stagger-1 visible" style="background: linear-gradient(135deg, #3A5A40 0%, #588157 50%, #3A5A40 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
-              AYURDIET
-            </h1>
-            
-            <!-- Slogan -->
-            <div class="max-w-3xl mx-auto mb-8 fade-in-up stagger-2">
-              <p class="text-xl sm:text-2xl text-earth-soil/90 font-medium leading-relaxed">
-                "Transforming lives through ancient wisdom, modern science"
-              </p>
-            </div>
-            
-            <!-- Tagline -->
-            <div class="inline-flex items-center gap-2 rounded-full border border-earth-clay/35 bg-white/55 px-6 py-3 mb-12 fade-in-up stagger-3">
-              <span class="text-sm font-semibold text-earth-soil">Personalized Ayurvedic diet plan based on</span>
-              <span class="text-sm font-semibold text-earth-moss">BMI</span>
-              <span class="text-sm font-semibold text-earth-soil">+</span>
-              <span class="text-sm font-semibold text-earth-moss">Dosha</span>
-            </div>
-            
-            <!-- CTA Buttons -->
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center fade-in-up stagger-4">
-              <a href="#bmi" class="inline-flex items-center justify-center rounded-xl bg-earth-moss px-8 py-4 text-base font-semibold text-earth-sand shadow-soft hover:bg-earth-leaf transition-all duration-300 transform hover:scale-105 pulse-hover">Start with BMI</a>
-              <a href="#dosha" class="inline-flex items-center justify-center rounded-xl border border-earth-clay/40 bg-white/60 px-8 py-4 text-base font-semibold hover:bg-earth-sand transition-all duration-300 transform hover:scale-105 pulse-hover">Take Dosha Quiz</a>
-            </div>
-            
-            <!-- Trust Indicators -->
-            <div class="mt-12 flex items-center justify-center gap-8 fade-in-up stagger-5">
-              <div class="text-center">
-                <div class="text-2xl font-bold text-earth-moss">15+</div>
-                <div class="text-sm text-earth-soil/70">Years Experience</div>
-              </div>
-              <div class="text-center">
-                <div class="text-2xl font-bold text-earth-moss">5000+</div>
-                <div class="text-sm text-earth-soil/70">Happy Clients</div>
-              </div>
-              <div class="text-center">
-                <div class="text-2xl font-bold text-earth-moss">98%</div>
-                <div class="text-sm text-earth-soil/70">Success Rate</div>
-              </div>
-            </div>
+      <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden" style="background: linear-gradient(135deg, #f7f3e6 0%, #e8f5e8 50%, #f0f8e8 100%);">
+      <!-- Blurred Video Background -->
+      <div class="absolute inset-0 z-0">
+        <video 
+          autoplay 
+          muted 
+          loop 
+          playsinline
+          class="w-full h-full object-cover"
+          style="transform: scale(1.1); opacity: 0.6; filter: brightness(0.8) contrast(0.9);"
+        >
+          <source src="./WhatsApp Video 2026-01-06 at 20.21.37.mp4" type="video/mp4">
+        </video>
+      </div>
+      
+      <!-- Content -->
+      <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <!-- AYURDIET Logo -->
+        <div class="inline-flex items-center justify-center mb-8 fade-in-up scale-in visible">
+          <div class="h-32 w-32 rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-earth-moss to-earth-leaf flex items-center justify-center float-animation" style="transform: translateY(113.75px);">
+            <img src="./WhatsApp Image 2026-01-06 at 12.30.50.jpeg" alt="AYURDIET Logo" class="h-full w-full object-cover">
           </div>
         </div>
-      </section>
+        
+        <!-- Brand Name -->
+        <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl font-black mb-6 tracking-tight fade-in-up stagger-1 visible" style="background: linear-gradient(135deg, #3A5A40 0%, #588157 50%, #3A5A40 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;" data-component-name="<h1 />">
+          AYURDIET
+        </h1>
+        
+        <!-- Slogan -->
+        <div class="max-w-3xl mx-auto mb-8 fade-in-up stagger-2 visible">
+          <p class="text-xl sm:text-2xl text-white font-medium leading-relaxed drop-shadow-lg" data-component-name="<p />">
+            "Transforming lives through ancient wisdom, modern science"
+          </p>
+        </div>
+        
+        <!-- Tagline -->
+        <div class="inline-flex items-center gap-2 rounded-full border border-earth-clay/35 bg-white/55 px-6 py-3 mb-12 fade-in-up stagger-3 visible" data-component-name="<div />">
+          <span class="text-sm font-semibold text-earth-soil" data-component-name="<span />">Personalized Ayurvedic diet plan based on</span>
+          <span class="text-sm font-semibold text-earth-moss">BMI</span>
+          <span class="text-sm font-semibold text-earth-soil">+</span>
+          <span class="text-sm font-semibold text-earth-moss">Dosha</span>
+        </div>
+        
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in-up stagger-4 visible">
+          <a href="#bmi" class="inline-flex items-center justify-center rounded-2xl bg-earth-moss px-8 py-4 text-base font-semibold text-earth-sand shadow-soft hover:bg-earth-leaf transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg">
+            <span>Start Your Journey</span>
+            <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
+          </a>
+          <a href="#contact" class="inline-flex items-center justify-center rounded-2xl border-2 border-earth-clay/40 bg-white/60 px-8 py-4 text-base font-semibold text-earth-forest shadow-soft hover:bg-earth-sand transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg">
+            <span>Book Consultation</span>
+            <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
 
       <!-- Original Hero Section with Brand Details -->
       <section class="section-anchor" id="brand-details" style="background: linear-gradient(135deg, #f7f3e6 0%, #e8f5e8 50%, #f0f8e8 100%);">
@@ -964,5 +971,42 @@
     
     <!-- Tidio Chat Widget -->
     <script src="//code.tidio.co/sdtjp1gs660tv9c71ju3omu7yknbpj7i.js" async></script>
+    
+    <!-- Background Music - Auto Play Loop -->
+    <audio id="backgroundMusic" loop>
+      <source src="./relaxing-guitar-loop-v8-252351.mp3" type="audio/mpeg">
+    </audio>
+    
+    <script>
+      // Handle background music playback
+      document.addEventListener('DOMContentLoaded', function() {
+        const audio = document.getElementById('backgroundMusic');
+        let hasInteracted = false;
+        
+        // Try to play immediately
+        audio.play().catch(function(error) {
+          console.log('Auto-play prevented, waiting for user interaction');
+        });
+        
+        // Start music on first user interaction
+        function startMusic() {
+          if (!hasInteracted) {
+            hasInteracted = true;
+            audio.play().catch(function(error) {
+              console.log('Music playback failed:', error);
+            });
+            // Remove event listeners after first interaction
+            document.removeEventListener('click', startMusic);
+            document.removeEventListener('touchstart', startMusic);
+            document.removeEventListener('keydown', startMusic);
+          }
+        }
+        
+        // Add event listeners for user interaction
+        document.addEventListener('click', startMusic);
+        document.addEventListener('touchstart', startMusic);
+        document.addEventListener('keydown', startMusic);
+      });
+    </script>
   </body>
 </html>
