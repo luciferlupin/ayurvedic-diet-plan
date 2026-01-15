@@ -414,8 +414,7 @@ const recipes = [
       "For Kapha types, increase ginger and cinnamon for warmth",
       "Use fresh amla pulp when available for maximum benefits"
     ]
-  }
-];
+  },
   {
     id: 2,
     title: "CCF Tea Recipe (Cumin–Coriander–Fennel Tea)",
